@@ -1,0 +1,46 @@
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+[user]
+  name = Kavin Valli
+  email = kavinvalli@gmail.com
+[core]
+  editor = nvim
+  autocrlf = input
+[pull]
+  rebase = false
+[http]
+  sslVerify = true
+[color]
+  ui = true
+[github]
+  user = kavin25
+[merge "ours"]
+  driver = true
+[alias]
+  co = checkout
+  c = commit -m
+  caa = commit -am
+  aa = add --all
+  s = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  l = log --oneline
+  last = log -1
+  lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  p = push
+  po = push origin
+  pom = push origin master
+  d = diff
+  ap = add -p
+  pl = pull
+  plo = pull origin
+  plom = pull origin master
+  cl = clone
+  a = add
+[init]
+  defaultBranch = master

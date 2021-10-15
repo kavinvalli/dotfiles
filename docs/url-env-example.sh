@@ -1,0 +1,5 @@
+set -x AIRTABLE_API_KEY ""
+set -x AIRTABLE_BASE_ID ""
+set -x AIRTABLE_TABLE_NAME ""
+set -x MAIN_DOMAIN ""
+
