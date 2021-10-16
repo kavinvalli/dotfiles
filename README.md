@@ -1,40 +1,67 @@
 # Kavin's .dotfiles
 
 ## Screenshots
+
 ![Screenshot 2021-10-15 at 6 31 04 PM](https://user-images.githubusercontent.com/41034356/137490922-0f5e66ea-8019-44a8-9a57-c35d52352c53.png)
+
+## Dependencies
+
+Install the following
+
+- [Fish Shell](https://fishshell.com/) - Unix shell
+  - [ohmyfish](https://github.com/oh-my-fish/oh-my-fish) - Makes it easier to
+    extend fish with plugins
+- [Neovim](https://neovim.io/) - Vim but better
+  - [vim-plug](https://github.com/junegunn/vim-plug) - Plugin Manager for Neovim
+- [Tmux](https://github.com/tmux/tmux) - Terminal Multiplexer
+  - [tpm](https://github.com/tmux-plugins/tpm) - Plugin Manager for Tmux
+- [GNU Stow](https://www.gnu.org/software/stow/) - Symlink manager
+
+### Some more optional dependencies for some fish functions
+
+- [dotco](https://github.com/someshkar/dotco) - A URL Shortener with Vercel and
+  Airtable
+- [Github CLI](https://cli.github.com/) - Github CLI
+  - Get the `delete repo` permission by doing `gh auth login -s delete_repo`
 
 ## Setup
 
-1. Install the following
-   - Fish Shell
-     - ohmyfish
-   - Neovim
-     - vim-plug
-   - Tmux
-     - tpm (Tmux Plugin manager)
-   - GNU Stow
-2. `mv ~/.dotfiles ~/.dotfiles.bak && git clone https://github.com/kavin25/dotfiles.git .dotfiles`
-3. Change Airtable URL CLI env vars -
-   `cd ~/.dotfiles && cp docs/url-env-example.sh scripts/url-env.sh`
-4. `stow */`
-5. Some [Nerd Font](https://github.com/ryanoasis/nerd-fonts) - I use
-   `Fira Code Nerd Font`
+1. Install the dependencies above
+2. Backup old dotfiles if you have any
 
-## Dependency for some fish functions
+```sh
+mv ~/.dotfiles ~/.dotfiles.bak
+```
 
-1. [dotco](https://github.com/someshkar/dotco)
+3. Clone this repo
 
-- Using for my URL Shortener
+```sh
+git clone https://github.com/kavin25/dotfiles.git
+cd ~/.dotfiles
+```
 
-2. [Github CLI](https://cli.github.com/)
-   - Make sure to get `delete repo` permission by doing
-     `gh auth login -s delete_repo`
+4. Change Airtable env vars for
+   [dotco-cli](https://github.com/kavin25/airtable-url-cli)
+
+```sh
+cp docs/url-env-example.sh scripts/url-env.sh
+```
+
+5. Symlink with Stow
+
+```sh
+stow */
+```
+
+6. Install some [Nerd Font](https://github.com/ryanoasis/nerd-fonts) - for some
+   icons and stuff
 
 ## Credits
 
-1. [dotco](https://github.com/kavin25/dotco)
-2. [dotco-cli](https://github.com/kavin25/airtable-url-cli)
-3. [notes-cli](https://github.com/kavin25/.dotfiles/blob/master/.config/fish/functions/notes.fish) -
-   @dotangad
-4. [Angad's Tmux Config](https://github.com/dotangad/dotfiles/blob/master/.tmux.conf)
-5. [Blacksuan19's Neovim Config](https://github.com/Blacksuan19/init.nvim)
+- [dotco](https://github.com/someshkar/dotco) - A URL Shortener with Vercel and
+  Airtable
+- [dotco-cli](https://github.com/kavin25/airtable-url-cli)
+- [notes-cli](fish/.config/fish/functions/notes.fish) -
+  [@dotangad](https://github.com/dotangad)
+- [@dotangad's Tmux Config](https://github.com/dotangad/dotfiles/blob/master/.tmux.conf)
+- [Blacksuan19's Tmux Config](https://github.com/Blacksuan19/init.nvim)
