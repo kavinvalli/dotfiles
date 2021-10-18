@@ -3,7 +3,8 @@ let mapleader=","
 nnoremap ; :
 nmap \ <leader>q
 map <F6> :Startify <CR>
-nmap <leader>r :source ~/.config/nvim/init.vim<CR>
+nmap <leader>R :so ~/.config/nvim/init.vim<CR>
+nmap <leader>r :so %<CR>
 nmap <leader>q :bd<CR>
 nmap <leader>w :w<CR>
 map <leader>s :Format<CR>

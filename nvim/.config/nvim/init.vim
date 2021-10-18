@@ -13,9 +13,9 @@ source ~/.config/nvim/plugins/fzf-conf.vim
 source ~/.config/nvim/plugins/rainbow-brackets-conf.vim
 source ~/.config/nvim/plugins/tmux-navigator-conf.vim
 source ~/.config/nvim/plugins/semshi-conf.vim
-source ~/.config/nvim/plugins/statusline.vim
+" source ~/.config/nvim/plugins/statusline.vim
+source ~/.config/nvim/plugins/lualine-conf.lua
+source ~/.config/nvim/plugins/barbar-conf.vim
 source ~/.config/nvim/plugins/nvim-tree-conf.vim
 source ~/.config/nvim/plugins/which-key-conf.vim
-source ~/.config/nvim/plugins/barbar-conf.vim
 source ~/.config/nvim/keys.vim
-

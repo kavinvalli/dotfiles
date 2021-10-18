@@ -26,10 +26,11 @@ set foldmethod=marker foldlevel=0                       " Fold all comments
 set inccommand=nosplit                                  " visual feedback while substituting
 set showtabline=0                                       " always show tabline
 set grepprg=rg\ --vimgrep                               " use rg as default grepper
-autocmd SourcePost * highlight Normal     ctermbg=NONE guibg=NONE
-            \ |    highlight NormalNC     ctermbg=NONE guibg=NONE
-            \ |    highlight LineNr     ctermbg=NONE guibg=NONE
-            \ |    highlight SignColumn ctermbg=NONE guibg=NONE
+" autocmd SourcePost * highlight Normal     ctermbg=NONE guibg=NONE
+"             \ |    highlight NormalNC     ctermbg=NONE guibg=NONE
+"             \ |    highlight LineNr     ctermbg=NONE guibg=NONE
+"             \ |    highlight SignColumn ctermbg=NONE guibg=NONE
+"             \ |    highlight ColorColumn ctermbg=None guibg=None
 
 " performance tweaks
 set nocursorline

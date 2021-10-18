@@ -14,8 +14,13 @@ hi DiffRemoved guibg=#0f111a guifg=#e53935
 
 " coc multi cursor highlight color
 hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
-" let g:material_style = 'oceanic'
+" let g:material_style = 'palenight'
 set background=dark
-colorscheme onedark
 
-" highlight NvimTreeFolderIcon guifg=#F78C6C
+let g:tokyonight_style="night"
+let g:tokyonight_transparent_sidebar=v:true
+let g:tokyonight_dark_sidebar=v:false
+let g:tokyonight_transparent=v:true
+colorscheme tokyonight
+
+highlight NvimTreeFolderIcon guifg=#bb9af7

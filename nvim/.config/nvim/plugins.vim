@@ -13,10 +13,11 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 " ================= looks and GUI stuff ================== "{{{
 Plug 'ryanoasis/vim-devicons'                           " pretty icons everywhere
 Plug 'luochen1990/rainbow'                              " rainbow parenthesis
-Plug 'hzchirs/vim-material'                             " material color themes
+" Plug 'hzchirs/vim-material'                             " material color themes
 Plug 'gregsexton/MatchTag'                              " highlight matching html tags
 Plug 'Jorengarenar/vim-MvVis'                           " move visual selection
-Plug 'olimorris/onedark.nvim'                           " one dark them
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'hoob3rt/lualine.nvim'
 "}}}
 
 " ================ Tree =================================== "{{{
@@ -40,7 +41,7 @@ Plug 'mhinz/vim-startify'                                                 " cool
 Plug 'psliwka/vim-smoothie'                                               " some very smooth ass scrolling
 Plug 'wellle/tmux-complete.vim'                                           " complete words from a tmux panes
 Plug 'tpope/vim-eunuch'                                                   " run common Unix commands inside Vim
-Plug 'machakann/vim-sandwich'                                             " make sandwiches
+" Plug 'machakann/vim-sandwich'                                             " make sandwiches
 Plug 'christoomey/vim-tmux-navigator'                                     " seamless vim and tmux navigation
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }  " preview markdown files
 Plug 'jiangmiao/auto-pairs'                                               " brackets auto pairing
