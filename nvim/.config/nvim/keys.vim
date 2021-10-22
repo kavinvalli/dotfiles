@@ -128,7 +128,7 @@ nmap <silent> <leader>b. :OpenBrowserSmartSearch<Space>
 
 " ======================== Custom Scripts ========================= "{{{
 nmap <silent> <leader>kc :! tmux neww cht<CR>
-nmap <silent> <leader>kps :! tmux neww fish -c "passfzf -s"<CR>
+nmap <silent> <leader>kps :! tmux neww passfzf<CR>
 " nmap <silent> <leader>kpi :! tmux neww fish -c "passfzf -i"<CR>
 "}}}
 

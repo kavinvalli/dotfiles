@@ -25,9 +25,8 @@ end
 # end
 
 function passfzf
-  if test $argv[1] = "-s"
-    __passfzf_show
+  __passfzf_show
   # else if test $argv[1] = "-i"
   #   __passfzf_insert
-  end
+  # end
 end
