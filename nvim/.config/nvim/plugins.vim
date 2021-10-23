@@ -50,6 +50,7 @@ Plug 'romgrk/barbar.nvim'                                                 " tabs
 Plug 'folke/which-key.nvim'
 Plug 'tyru/open-browser.vim'
 Plug 'andweeb/presence.nvim'                                              " discord presence
+Plug 'aquach/vim-http-client'
 "}}}
 
 " ================= Git Intergration ============== " {{{
@@ -65,7 +66,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'watzon/vim-edge-template'
 Plug 'dag/vim-fish'
-Plug 'yaegassy/coc-htmldjango', {'do': 'yarn install --frozen-lockfile'}
 Plug 'jparise/vim-graphql'
 Plug 'pantharshit00/vim-prisma'
 "}}}
