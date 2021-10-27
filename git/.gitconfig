@@ -16,7 +16,7 @@
 [color]
   ui = true
 [github]
-  user = kavin25
+  user = kavinvalli
 [merge "ours"]
   driver = true
 [alias]

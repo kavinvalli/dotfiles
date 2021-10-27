@@ -35,6 +35,7 @@ let g:coc_global_extensions = [
             \'coc-htmldjango',
             \'coc-phpls',
             \'coc-lightbulb',
+            \'coc-rust-analyzer',
             \]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
@@ -65,7 +66,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " other stuff
 nmap <leader>rn <Plug>(coc-rename)
-" nmap <leader>o :OR <CR>
+nmap <leader>o :OR <CR>
 
 " jump stuff
 nmap <leader>jd <Plug>(coc-definition)
@@ -88,4 +89,3 @@ command! -nargs=0 Format :call CocAction('format')
 
 " organize imports
 command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
-

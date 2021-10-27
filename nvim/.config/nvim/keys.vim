@@ -129,9 +129,11 @@ nmap <silent> <leader>b. :OpenBrowserSmartSearch<Space>
 " ======================== Custom Scripts ========================= "{{{
 nmap <silent> <leader>kc :! tmux neww cht<CR>
 nmap <silent> <leader>kps :! tmux neww passfzf<CR>
+nmap <silent> <leader>k, :silent !cd (pwd) && python3 -m http.server<CR>
 " nmap <silent> <leader>kpi :! tmux neww fish -c "passfzf -i"<CR>
 "}}}
 
 au FileType markdown nmap <leader>m :MarkdownPreview<CR>
+
 
 

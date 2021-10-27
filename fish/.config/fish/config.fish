@@ -47,7 +47,7 @@ set -U EDITOR "nvim"
 source ~/aliases.sh
 source ~/url-env.sh
 
-#neofetch
+# neofetch
 #colorscript random
 # TokyoNight Color Palette
 set -l foreground c0caf5

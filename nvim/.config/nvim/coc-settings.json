@@ -16,7 +16,8 @@
     "typescript",
     "javascriptreact",
     "php",
-    "vue"
+    "vue",
+    "rust"
   ],
   "prettier.tabWidth": 2,
 

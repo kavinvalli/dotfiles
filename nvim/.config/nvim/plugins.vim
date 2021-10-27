@@ -18,6 +18,7 @@ Plug 'gregsexton/MatchTag'                              " highlight matching htm
 Plug 'Jorengarenar/vim-MvVis'                           " move visual selection
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'hoob3rt/lualine.nvim'
+Plug 'romgrk/doom-one.vim'
 "}}}
 
 " ================ Tree =================================== "{{{

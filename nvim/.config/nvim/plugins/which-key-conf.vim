@@ -110,6 +110,7 @@ require("which-key").register({
     pi = "Pass Insert"
   },
   q = "Quit",
+  o = "Organise Imports",
   r = "Source init.vim"
 }, { prefix = "<leader>" })
 EOF
