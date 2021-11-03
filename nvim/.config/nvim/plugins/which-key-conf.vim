@@ -50,6 +50,7 @@ require("which-key").register({
   c = "Search commands",
   ["/"] = "Search in files in project",
   sh = "Search commands in history",
+  ["[n"] = "Rename",
   j = {
     name = "LSP",
     d = "Definition",
