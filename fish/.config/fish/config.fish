@@ -2,6 +2,7 @@ set TERM xterm-256color
 
 set GOPATH $HOME/go
 set GOBIN $HOME/go/bin
+set LDFLAGS -L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
 
 set -x KAVIN_OS ""
 switch (uname)
