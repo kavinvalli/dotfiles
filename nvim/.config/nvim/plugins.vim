@@ -52,7 +52,6 @@ Plug 'folke/which-key.nvim'
 Plug 'tyru/open-browser.vim'
 Plug 'andweeb/presence.nvim'                                              " discord presence
 Plug 'aquach/vim-http-client'
-Plug 'github/copilot.vim'
 "}}}
 
 " ================= Git Intergration ============== " {{{
