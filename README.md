@@ -4,18 +4,30 @@
 
 ![Screenshot 2021-10-15 at 6 31 04 PM](https://user-images.githubusercontent.com/41034356/137490922-0f5e66ea-8019-44a8-9a57-c35d52352c53.png)
 
+## Stuff I Use
+
+> Note: all these have to be installed
+
+- [iTerm2](https://iterm2.com/) - Terminal
+- [yabai](https://github.com/xorpse/yabai/) - Window Manager
+- [skhd](https://github.com/koekeishiya/skhd/) - Hotkey deamon (used with yabai)
+- [uebersicht](https://github.com/felixhageloh/uebersicht) - Desktop widgets
+- [simple-bar](https://simple-bar.com/en/) - Status Bar (used with uebersicht)
+- [fish](https://fishshell.com) - Shell
+- [neovim](https://neovim.io/) - Editor
+- [tmux](https://github.com/tmux/tmux) - Terminal Multiplexer
+
 ## Dependencies
 
-Install the following
+Install the following too
 
-- [Fish Shell](https://fishshell.com/) - Unix shell
-  - [ohmyfish](https://github.com/oh-my-fish/oh-my-fish) - Makes it easier to
-    extend fish with plugins
-- [Neovim](https://neovim.io/) - Vim but better
-  - [vim-plug](https://github.com/junegunn/vim-plug) - Plugin Manager for Neovim
-- [Tmux](https://github.com/tmux/tmux) - Terminal Multiplexer
-  - [tpm](https://github.com/tmux-plugins/tpm) - Plugin Manager for Tmux
+- [ohmyfish](https://github.com/oh-my-fish/oh-my-fish) - Makes it easier to
+  extend fish with plugins
+- [vim-plug](https://github.com/junegunn/vim-plug) - Plugin Manager for Neovim
+- [tpm](https://github.com/tmux-plugins/tpm) - Plugin Manager for Tmux
 - [GNU Stow](https://www.gnu.org/software/stow/) - Symlink manager
+- [stackline](https://github.com/AdamWagner/stackline/) - Visual window stacks
+  with yabai
 
 ### Some more optional dependencies for some fish functions
 
@@ -65,3 +77,4 @@ stow */
   [@dotangad](https://github.com/dotangad)
 - [@dotangad's Tmux Config](https://github.com/dotangad/dotfiles/blob/master/.tmux.conf)
 - [Blacksuan19's Tmux Config](https://github.com/Blacksuan19/init.nvim)
+- [Neil Sabde's dotfiles](https://github.com/hackorum/.dotfiles)

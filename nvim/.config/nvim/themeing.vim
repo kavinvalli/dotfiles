@@ -17,10 +17,10 @@ hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
 " let g:material_style = 'palenight'
 set background=dark
 
-let g:tokyonight_style="night"
-let g:tokyonight_transparent_sidebar=v:true
-let g:tokyonight_dark_sidebar=v:false
-let g:tokyonight_transparent=v:true
-colorscheme tokyonight
+" let g:tokyonight_style="night"
+" let g:tokyonight_transparent_sidebar=v:true
+" let g:tokyonight_dark_sidebar=v:false
+let g:tokyodark_transparent_background=1
+colorscheme tokyodark
 
 highlight NvimTreeFolderIcon guifg=#bb9af7

@@ -6,7 +6,7 @@ yabai -m config focus_follows_mouse          off
 yabai -m config window_placement             first_child
 yabai -m config window_topmost               off
 yabai -m config window_shadow                off
-yabai -m config window_opacity               on
+yabai -m config window_opacity               off
 yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        0.9
 yabai -m config normal_window_opacity        0.9
@@ -34,22 +34,22 @@ yabai -m config --space 8 layout float
 yabai -m config --space 9 layout float
 yabai -m config --space 10 layout float
 
-yabai -m space 1 --label I
-yabai -m space 2 --label II
-yabai -m space 3 --label III
-yabai -m space 4 --label IV
-yabai -m space 5 --label V
-yabai -m space 6 --label VI
+yabai -m space 1 --label web
+yabai -m space 2 --label chat
+yabai -m space 3 --label prog
+yabai -m space 4 --label mail
+yabai -m space 5 --label music
+yabai -m space 6 --label cal
 yabai -m space 7 --label VII
 yabai -m space 8 --label VIII
 yabai -m space 9 --label IX
 yabai -m space 10 --label X
 
-yabai -m rule --add app="Brave"      space=1
-yabai -m rule --add app="iTerm"      space=3
+# yabai -m rule --add app="Brave"      space=1
+# yabai -m rule --add app="iTerm"      space=3
 yabai -m rule --add app="WhatsApp"   space=2
 yabai -m rule --add app="Discord"    space=2
-yabai -m rule --add app="Spotify"    space=4
+yabai -m rule --add app="Spotify"    space=5
 
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Finder$" manage=off

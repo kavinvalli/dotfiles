@@ -65,7 +65,7 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " other stuff
-nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>[n <Plug>(coc-rename)
 nmap <leader>o :OR <CR>
 
 " jump stuff

@@ -16,7 +16,8 @@ Plug 'luochen1990/rainbow'                              " rainbow parenthesis
 " Plug 'hzchirs/vim-material'                             " material color themes
 Plug 'gregsexton/MatchTag'                              " highlight matching html tags
 Plug 'Jorengarenar/vim-MvVis'                           " move visual selection
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'tiagovla/tokyodark.nvim'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'romgrk/doom-one.vim'
 "}}}
