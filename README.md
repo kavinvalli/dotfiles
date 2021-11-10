@@ -2,7 +2,9 @@
 
 ## Screenshots
 
-![Screenshot 2021-10-15 at 6 31 04 PM](https://user-images.githubusercontent.com/41034356/137490922-0f5e66ea-8019-44a8-9a57-c35d52352c53.png)
+![Screenshot 2021-11-10 at 2 40 49 PM](https://user-images.githubusercontent.com/41034356/141084117-2f2c9597-c13b-4aa2-9b02-e40478187524.png)
+![Screenshot 2021-11-10 at 2 47 50 PM](https://user-images.githubusercontent.com/41034356/141085244-a84aa09a-36f7-4a6d-b3ae-39e4cfbc99e2.png)
+
 
 ## Stuff I Use
 
