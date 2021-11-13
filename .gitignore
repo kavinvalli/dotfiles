@@ -1,2 +1,3 @@
 nvim/.config/nvim/plugged
 scripts/url-env.sh
+git/.config/gh/hosts.yml
