@@ -21,6 +21,11 @@ set background=dark
 " let g:tokyonight_transparent_sidebar=v:true
 " let g:tokyonight_dark_sidebar=v:false
 let g:tokyodark_transparent_background=1
-colorscheme tokyodark
+" let g:rose_pine_disable_background = v:true
+" let g:rose_pine_variant = 'moon'
+colorscheme nord
 
-highlight NvimTreeFolderIcon guifg=#bb9af7
+highlight NvimTreeFolderIcon guifg=#eb6f92
+autocmd SourcePost * highlight Normal     ctermbg=NONE guibg=NONE
+            \ |    highlight LineNr     ctermbg=NONE guibg=NONE
+            \ |    highlight SignColumn ctermbg=NONE guibg=NONE

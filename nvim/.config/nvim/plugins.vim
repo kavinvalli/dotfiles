@@ -19,7 +19,9 @@ Plug 'Jorengarenar/vim-MvVis'                           " move visual selection
 " Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'hoob3rt/lualine.nvim'
-Plug 'romgrk/doom-one.vim'
+" Plug 'romgrk/doom-one.vim'
+" Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
+Plug 'arcticicestudio/nord-vim'
 "}}}
 
 " ================ Tree =================================== "{{{
