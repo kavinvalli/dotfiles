@@ -52,7 +52,7 @@ require("which-key").register({
   sh = "Search commands in history",
   ["[n"] = "Rename global",
   j = {
-    name = "LSP",
+    name = "+LSP",
     d = "Definition",
     i = "Implementation",
     r = "References",

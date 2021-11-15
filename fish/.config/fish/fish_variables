@@ -190,5 +190,5 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/Users/kavinvalli/\x2elocal/bin\x1e/opt/homebrew/opt/openjdk/bin\x1e/opt/homebrew/bin\x1e/Users/kavinvalli/\x2ecargo/bin\x1e/Users/kavinvalli/\x2ecomposer/vendor/bin\x1e/Library/flutter/bin\x1e/usr/local/opt/util\x2dlinux/bin\x1e/Library/Frameworks/Python\x2eframework/Versions/3\x2e8/bin\x1e/usr/bin\x1e/usr/local/bin
+SETUVAR fish_user_paths:/Users/kavinvalli/kscripts\x1e/Users/kavinvalli/\x2elocal/bin\x1e/opt/homebrew/opt/openjdk/bin\x1e/opt/homebrew/bin\x1e/Users/kavinvalli/\x2ecargo/bin\x1e/Users/kavinvalli/\x2ecomposer/vendor/bin\x1e/Library/flutter/bin\x1e/usr/local/opt/util\x2dlinux/bin\x1e/Library/Frameworks/Python\x2eframework/Versions/3\x2e8/bin\x1e/usr/bin\x1e/usr/local/bin
 SETUVAR fish_users_path:/usr/local/bin

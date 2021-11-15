@@ -1,4 +1,4 @@
-cmd - return : open -a Brave\ Browser
+cmd + alt - return : open -a Brave\ Browser
 cmd + ctrl - return : open -n -a Brave\ Browser
 cmd + ctrl + alt - 1 : open https://github.com
 ctrl - return : open -a iTerm
