@@ -3,6 +3,7 @@ cmd + ctrl - return : open -n -a Brave\ Browser
 cmd + ctrl + alt - 1 : open https://github.com
 ctrl - return : open -a iTerm
 ctrl + shift - return : open -n -a iTerm
+cmd + ctrl + alt + shift - p : /Users/kavinvalli/.dotfiles/bin/.local/bin/test.sh
 
 # focus window
 ctrl + alt - h : yabai -m window --focus west

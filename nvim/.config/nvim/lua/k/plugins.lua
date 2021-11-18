@@ -6,8 +6,9 @@ return require('packer').startup(function()
 
   -- Colorscheme
   use {
-    'shaunsingh/nord.nvim',
-    config = function() require 'k.themeing'.setup() end,
+    -- 'shaunsingh/nord.nvim',
+    'folke/tokyonight.nvim',
+    config = function() require 'k.themeing' end,
   }
 
   -- Highlighting
@@ -106,5 +107,23 @@ return require('packer').startup(function()
       require 'k.plugins.lsp.eslint_ls'
     end,
   }
+
+  use {
+    "ThePrimeagen/refactoring.nvim",
+      requires = {
+        {"nvim-lua/plenary.nvim"},
+        {"nvim-treesitter/nvim-treesitter"}
+    },
+    config = function() require 'k.plugins.refactoring' end,
+  }
+  
+  use "christoomey/vim-tmux-navigator"
+  use "tpope/vim-commentary"
+  use "psliwka/vim-smoothie"
+  use {
+    "glepnir/dashboard-nvim",
+    config = function() require 'k.plugins.dashboard' end
+  }
+
 end)
 

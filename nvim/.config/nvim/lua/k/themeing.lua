@@ -1,15 +1,7 @@
-local cmd = vim.cmd
+local g = vim.g
+g.tokyonight_style="night"
+g.tokyonight_transparent=true
+g.tokyonight_transparent_sidebar=true
+g.tokyonight_lualine_bold=false
 
-local M = {}
-
-function M.setup()
-  -- Set Background to transparent
-  cmd [[
-    autocmd SourcePost * highlight Normal     ctermbg=NONE guibg=NONE
-            \ |          highlight LineNr     ctermbg=NONE guibg=NONE
-            \ |          highlight SignColumn ctermbg=NONE guibg=NONE
-  ]]
-  cmd [[colorscheme nord]]
-end
-
-return M
+vim.cmd [[colorscheme tokyonight]]
