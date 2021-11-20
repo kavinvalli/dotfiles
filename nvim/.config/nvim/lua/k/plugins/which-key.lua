@@ -18,10 +18,21 @@ local mappings = {
     name = "Nvim Tree",
     r = { ":NvimTreeRefresh<CR>", "Refresh" },
   },
-  p = { ":lua require(\"telescope.builtin\").find_files({ find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' } })<CR>", "Find Files" },
-  f = { ":Telescope current_buffer_fuzzy_find<CR>", "Find in file"},
-  c = { ":Telescope commands<CR>", "Find commands"},
-  l = { ":Telescope file_browser()<CR>", "File browser"},
+  p = {
+    name = "Telescope",
+    p = { ":lua require(\"telescope.builtin\").find_files({ find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' } })<CR>", "Find Files" },
+    f = { ":Telescope current_buffer_fuzzy_find<CR>", "Find in file"},
+    c = { ":Telescope commands<CR>", "Find commands"},
+    l = { ":Telescope file_browser<CR>", "File browser"},
+    m = { ":Telescope man_pages<CR>", "Man Pages"},
+    g = {
+      name = "Git",
+      cs = {":Telescope git_commits<CR>", "Commits"},
+      cb = {":Telescope git_bcommits<CR>", "Buffer's commits"},
+      b = {":Telescope git_branches<CR>", "Branches"},
+      s = {":Telescope git_status<CR>", "Status"},
+    },
+  },
   ["/"] = {
     ":lua require(\"telescope.builtin\").live_grep({ vimgrep_arguments = { 'rg', '--color=never', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', '-u', '--hidden' } })<CR>",
     "Find in project"

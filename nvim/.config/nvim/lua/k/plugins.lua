@@ -91,10 +91,17 @@ return require('packer').startup(function()
         config = function()
           require 'k.plugins.lsp.null_ls'
         end,
+        requires = {
+          'lewis6991/gitsigns.nvim',
+        }
       },
       "jose-elias-alvarez/nvim-lsp-ts-utils",
       'sbdchd/neoformat',
       'mattn/emmet-vim',
+      {
+        'kosayoda/nvim-lightbulb',
+        config = function() require 'k.plugins.nvim-lightbulb' end,
+      },
     },
     config = function()
       require 'k.plugins.lsp'
@@ -109,13 +116,19 @@ return require('packer').startup(function()
   }
 
   use {
-    "ThePrimeagen/refactoring.nvim",
-      requires = {
-        {"nvim-lua/plenary.nvim"},
-        {"nvim-treesitter/nvim-treesitter"}
-    },
-    config = function() require 'k.plugins.refactoring' end,
+    'akinsho/flutter-tools.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+    config = function() require 'k.plugins.lsp.flutter_ls' end
   }
+
+  -- use {
+  --   "ThePrimeagen/refactoring.nvim",
+  --     requires = {
+  --       {"nvim-lua/plenary.nvim"},
+  --       {"nvim-treesitter/nvim-treesitter"}
+  --   },
+  --   config = function() require 'k.plugins.refactoring' end,
+  -- }
   
   use "christoomey/vim-tmux-navigator"
   use "tpope/vim-commentary"
