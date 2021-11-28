@@ -21,3 +21,6 @@ map('i', 'jk', '<esc>', silent_noremap)
 map('i', 'Jk', '<esc>', silent_noremap)
 map('i', 'jK', '<esc>', silent_noremap)
 map('i', 'JK', '<esc>', silent_noremap)
+
+map('n', '<C-a>', ':!tmux display-popup -E "~/.local/bin/tmux-sessionizer"<CR>', silent_noremap)
+map('i', '<C-a>', ':!tmux display-popup -E "~/.local/bin/tmux-sessionizer"<CR>', silent_noremap)
