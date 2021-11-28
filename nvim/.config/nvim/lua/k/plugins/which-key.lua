@@ -2,7 +2,7 @@ local wk = require("which-key")
 
 local mappings = {
   q = { ":bd<CR>", "Quit Buffer" },
-  x = { ":wq<CR>", "Write and quit" },
+  x = { ":!chmod +x %<CR>", "Make file executable<" },
   w = {
     name = "Window",
     ['|'] = { ":vsplit<CR>", "Vertical Split" },
