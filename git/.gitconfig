@@ -6,6 +6,7 @@
 [user]
   name = Kavin Valli
   email = kavinvalli@gmail.com
+  signingkey = BB2A0B15D1BCAD86
 [core]
   editor = nvim
   autocrlf = input
