@@ -43,4 +43,4 @@
   cl = clone
   a = add
 [init]
-  defaultBranch = master
+  defaultBranch = main
