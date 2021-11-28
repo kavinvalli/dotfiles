@@ -33,6 +33,32 @@ local mappings = {
       s = {":Telescope git_status<CR>", "Status"},
     },
   },
+  g = {
+    name = "Git",
+    ["."] = {":G<CR>", "Menu"},
+    a = {
+      name = "Add",
+      ["."] = {":Git add<Space>", "Add"},
+      a = {":Git add .<CR>", "All"},
+    },
+    c = {":Git commit<CR>", "Commit"},
+    p = {
+      name = "Push / Pull",
+      o = {
+        name = "Origin",
+        ["."] = {":Git push origin<Space>", "Origin"},
+        m = {":Git push origin master<CR>", "Origin Master"},
+      },
+      l = {
+        name = "Pull",
+        o = {
+          name = "Origin",
+          ["."] = {":Git pull origin<Space>", "Origin"},
+          m = {":Git pull origin master<CR>", "Origin Master"},
+        },
+      },
+    }
+  },
   ["/"] = {
     ":lua require(\"telescope.builtin\").live_grep({ vimgrep_arguments = { 'rg', '--color=never', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', '-u', '--hidden' } })<CR>",
     "Find in project"

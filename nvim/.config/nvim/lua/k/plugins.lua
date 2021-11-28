@@ -133,10 +133,14 @@ return require('packer').startup(function()
   use "christoomey/vim-tmux-navigator"
   use "tpope/vim-commentary"
   use "psliwka/vim-smoothie"
+  
   use {
     "glepnir/dashboard-nvim",
     config = function() require 'k.plugins.dashboard' end
   }
+
+  -- Git Integration
+  use "tpope/vim-fugitive"
 
 end)
 
