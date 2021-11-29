@@ -141,6 +141,7 @@ return require('packer').startup(function()
 
   -- Git Integration
   use "tpope/vim-fugitive"
+  use "TimUntersberger/neogit"
 
 end)
 
