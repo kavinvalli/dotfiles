@@ -141,9 +141,25 @@ return require('packer').startup(function()
 
   -- Git Integration
   use "tpope/vim-fugitive"
-  use "TimUntersberger/neogit"
+  use {
+    "TimUntersberger/neogit",
+    config = function()
+      require "k.plugins.neogit"
+    end
+  }
+  use {
+    "sindrets/diffview.nvim",
+    config = function()
+      require 'k.plugins.diffview'
+    end
+  }
+  use "kdheepak/lazygit.nvim"
+
   -- Slides
   use "sotte/presenting.vim"
+
+  -- Miscallaneous
+  use 'rcarriga/nvim-notify'
 
 end)
 
