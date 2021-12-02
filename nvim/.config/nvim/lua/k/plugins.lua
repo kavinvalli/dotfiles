@@ -8,40 +8,53 @@ return require('packer').startup(function()
   use {
     -- 'shaunsingh/nord.nvim',
     'folke/tokyonight.nvim',
-    config = function() require 'k.themeing' end,
+    config = function()
+      require 'k.themeing'
+    end
   }
 
   -- Highlighting
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
-    config = function() require 'k.plugins.treesitter' end,
+    config = function()
+      require 'k.plugins.treesitter'
+    end,
     requires = {
       'windwp/nvim-ts-autotag',
       'p00f/nvim-ts-rainbow',
-      'nvim-treesitter/playground',
-    },
+      'nvim-treesitter/playground'
+    }
   }
 
   -- Status Line
   use {
     'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true},
-    config = function() require 'k.plugins.lualine' end,
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+      opt = true
+    },
+    config = function()
+      require 'k.plugins.lualine'
+    end
   }
 
   -- Tabs (Buffer Line)
   use {
     'romgrk/barbar.nvim',
     requires = {'kyazdani42/nvim-web-devicons'},
-    config = function() require 'k.plugins.barbar' end,
+    config = function()
+      require 'k.plugins.barbar'
+    end
   }
 
   -- Tree
   use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
-    config = function() require 'k.plugins.nvim-tree' end
+    config = function()
+      require 'k.plugins.nvim-tree'
+    end
   }
 
   -- Mapping Improvements
@@ -49,7 +62,7 @@ return require('packer').startup(function()
     'windwp/nvim-autopairs',
     config = function()
       require 'k.plugins.autopairs'
-    end,
+    end
   }
 
   -- Keybindings
@@ -63,8 +76,10 @@ return require('packer').startup(function()
   -- FZF
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} },
-    config = function() require 'k.plugins.telescope' end
+    requires = {{'nvim-lua/plenary.nvim'}},
+    config = function()
+      require 'k.plugins.telescope'
+    end
   }
 
   use {
@@ -72,9 +87,11 @@ return require('packer').startup(function()
     requires = {
       {
         'hrsh7th/vim-vsnip',
-        config = function() vim.g.vsnip_snippet_dir = '~/.config/nvim/vsnip' end
-      },
-      {
+        config = function()
+          vim.g.vsnip_snippet_dir =
+              '~/.config/nvim/vsnip'
+        end
+      }, {
         'hrsh7th/nvim-cmp',
         requires = {
           'hrsh7th/cmp-nvim-lsp',
@@ -82,26 +99,29 @@ return require('packer').startup(function()
           'hrsh7th/cmp-path',
           'hrsh7th/cmp-cmdline',
           'hrsh7th/cmp-vsnip',
-          'onsails/lspkind-nvim',
+          'onsails/lspkind-nvim'
         },
-        config = function() require 'k.plugins.cmp' end,
-      },
-      {
+        config = function()
+          require 'k.plugins.cmp'
+        end
+      }, {
         'jose-elias-alvarez/null-ls.nvim',
         config = function()
           require 'k.plugins.lsp.null_ls'
         end,
-        requires = {
-          'lewis6991/gitsigns.nvim',
-        }
-      },
-      "jose-elias-alvarez/nvim-lsp-ts-utils",
-      'sbdchd/neoformat',
-      'mattn/emmet-vim',
-      {
+        requires = {'lewis6991/gitsigns.nvim'}
+      }, "jose-elias-alvarez/nvim-lsp-ts-utils",
+      'sbdchd/neoformat', 'mattn/emmet-vim', {
         'kosayoda/nvim-lightbulb',
-        config = function() require 'k.plugins.nvim-lightbulb' end,
-      },
+        config = function()
+          require 'k.plugins.nvim-lightbulb'
+        end
+      }, 'maxmellon/vim-jsx-pretty', {
+        'simrat39/rust-tools.nvim',
+        config = function()
+          require 'k.plugins.lsp.rust_ls'
+        end
+      }
     },
     config = function()
       require 'k.plugins.lsp'
@@ -110,33 +130,29 @@ return require('packer').startup(function()
       require 'k.plugins.lsp.tsserver_ls'
       require 'k.plugins.lsp.php_ls'
       require 'k.plugins.lsp.python_ls'
-      -- require 'k.plugins.lsp.null_ls'
+      require 'k.plugins.lsp.lua_ls'
+      require 'k.plugins.lsp.efm_ls'
       require 'k.plugins.lsp.eslint_ls'
-    end,
+    end
   }
 
   use {
     'akinsho/flutter-tools.nvim',
     requires = 'nvim-lua/plenary.nvim',
-    config = function() require 'k.plugins.lsp.flutter_ls' end
+    config = function()
+      require 'k.plugins.lsp.flutter_ls'
+    end
   }
 
-  -- use {
-  --   "ThePrimeagen/refactoring.nvim",
-  --     requires = {
-  --       {"nvim-lua/plenary.nvim"},
-  --       {"nvim-treesitter/nvim-treesitter"}
-  --   },
-  --   config = function() require 'k.plugins.refactoring' end,
-  -- }
-  
   use "christoomey/vim-tmux-navigator"
   use "tpope/vim-commentary"
   use "psliwka/vim-smoothie"
-  
+
   use {
     "glepnir/dashboard-nvim",
-    config = function() require 'k.plugins.dashboard' end
+    config = function()
+      require 'k.plugins.dashboard'
+    end
   }
 
   -- Git Integration
