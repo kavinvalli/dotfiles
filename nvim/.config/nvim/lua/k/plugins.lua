@@ -142,6 +142,8 @@ return require('packer').startup(function()
   -- Git Integration
   use "tpope/vim-fugitive"
   use "TimUntersberger/neogit"
+  -- Slides
+  use "sotte/presenting.vim"
 
 end)
 
