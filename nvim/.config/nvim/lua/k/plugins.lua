@@ -176,6 +176,12 @@ return require('packer').startup(function()
 
   -- Miscallaneous
   use 'rcarriga/nvim-notify'
+  use {
+    'andweeb/presence.nvim',
+    config = function()
+      require 'k.plugins.presence'
+    end
+  }
 
 end)
 
