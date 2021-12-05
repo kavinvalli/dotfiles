@@ -78,5 +78,4 @@ stow */
 - [notes-cli](fish/.config/fish/functions/notes.fish) -
   [@dotangad](https://github.com/dotangad)
 - [@dotangad's Tmux Config](https://github.com/dotangad/dotfiles/blob/master/.tmux.conf)
-- [Blacksuan19's Tmux Config](https://github.com/Blacksuan19/init.nvim)
 - [Neil Sabde's dotfiles](https://github.com/hackorum/.dotfiles)
