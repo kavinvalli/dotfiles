@@ -109,5 +109,5 @@ ctrl - m : yabai -m window --focus stack.prev
 
 # Restart Yabai
 ctrl - q : brew services restart xorpse/formulae/yabai
-# ctrl - w : brew services restart skhd
-ctrl + shift - q : osascript -e 'tell app "System Events" to log out'
+ctrl - w : brew services restart skhd
+ctrl + shift - q : osascript -e 'tell app "System Events" to sleep'
