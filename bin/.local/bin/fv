@@ -1,0 +1,6 @@
+if [[ -z $1 ]]; then
+  output=$(find . -not -path "./.git/*" | fzf --tac --preview "bat {}")
+else
+  output=$(find . -not -path "./.git/*" | fzf --tac -q $1 --preview "bat {}")
+fi
+nvim $output
