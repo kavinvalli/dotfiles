@@ -1,0 +1,8 @@
+#! /bin/bash
+site=$(cd ~/.password-store && ls -d */ | fzf | sed 's/\///g')
+if [[ -z $site ]]; then
+  echo "Choose a site"
+else
+  username=$(cd ~/.password-store && ls "$site" | sed 's/\.gpg//g' | fzf)
+  pass show -c "$site/$username"
+fi
