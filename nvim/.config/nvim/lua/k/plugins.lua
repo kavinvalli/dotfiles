@@ -1,187 +1,103 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-  -- Colorscheme
-  use {
-    -- 'shaunsingh/nord.nvim',
-    'folke/tokyonight.nvim',
-    config = function()
-      require 'k.themeing'
-    end
-  }
-
-  -- Highlighting
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-    config = function()
-      require 'k.plugins.treesitter'
-    end,
-    requires = {
-      'windwp/nvim-ts-autotag',
-      'p00f/nvim-ts-rainbow',
-      'nvim-treesitter/playground'
+    -- Colorscheme
+    use {
+        -- 'shaunsingh/nord.nvim',
+        'folke/tokyonight.nvim',
+        config = function() require 'k.themeing' end
     }
-  }
 
-  -- Status Line
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = {
-      'kyazdani42/nvim-web-devicons',
-      opt = true
-    },
-    config = function()
-      require 'k.plugins.lualine'
-    end
-  }
-
-  -- Tabs (Buffer Line)
-  use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'},
-    config = function()
-      require 'k.plugins.barbar'
-    end
-  }
-
-  -- Tree
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function()
-      require 'k.plugins.nvim-tree'
-    end
-  }
-
-  -- Mapping Improvements
-  use {
-    'windwp/nvim-autopairs',
-    config = function()
-      require 'k.plugins.autopairs'
-    end
-  }
-
-  -- Keybindings
-  use {
-    'folke/which-key.nvim',
-    config = function()
-      require 'k.plugins.which-key'
-    end
-  }
-
-  -- FZF
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/plenary.nvim'}},
-    config = function()
-      require 'k.plugins.telescope'
-    end
-  }
-
-  use {
-    'neovim/nvim-lspconfig',
-    requires = {
-      {
-        'hrsh7th/vim-vsnip',
-        config = function()
-          vim.g.vsnip_snippet_dir =
-              '~/.config/nvim/vsnip'
-        end
-      }, {
-        'hrsh7th/nvim-cmp',
+    -- Highlighting
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        config = function() require 'k.plugins.treesitter' end,
         requires = {
-          'hrsh7th/cmp-nvim-lsp',
-          'hrsh7th/cmp-buffer',
-          'hrsh7th/cmp-path',
-          'hrsh7th/cmp-cmdline',
-          'hrsh7th/cmp-vsnip',
-          'onsails/lspkind-nvim'
-        },
-        config = function()
-          require 'k.plugins.cmp'
-        end
-      }, {
-        'jose-elias-alvarez/null-ls.nvim',
-        config = function()
-          require 'k.plugins.lsp.null_ls'
-        end,
-        requires = {'lewis6991/gitsigns.nvim'}
-      }, "jose-elias-alvarez/nvim-lsp-ts-utils",
-      'sbdchd/neoformat', 'mattn/emmet-vim', {
-        'kosayoda/nvim-lightbulb',
-        config = function()
-          require 'k.plugins.nvim-lightbulb'
-        end
-      }, 'maxmellon/vim-jsx-pretty', {
-        'simrat39/rust-tools.nvim',
-        config = function()
-          require 'k.plugins.lsp.rust_ls'
-        end
-      }
-    },
-    config = function()
-      require 'k.plugins.lsp'
-      require 'k.plugins.lsp.html_ls'
-      require 'k.plugins.lsp.css_ls'
-      require 'k.plugins.lsp.tsserver_ls'
-      require 'k.plugins.lsp.php_ls'
-      require 'k.plugins.lsp.python_ls'
-      require 'k.plugins.lsp.lua_ls'
-      require 'k.plugins.lsp.efm_ls'
-      require 'k.plugins.lsp.eslint_ls'
-    end
-  }
+            'windwp/nvim-ts-autotag', 'p00f/nvim-ts-rainbow',
+            'nvim-treesitter/playground'
+        }
+    }
 
-  use {
-    'akinsho/flutter-tools.nvim',
-    requires = 'nvim-lua/plenary.nvim',
-    config = function()
-      require 'k.plugins.lsp.flutter_ls'
-    end
-  }
+    -- Status Line
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = {'kyazdani42/nvim-web-devicons', opt = true},
+        config = function() require 'k.plugins.lualine' end
+    }
 
-  use "christoomey/vim-tmux-navigator"
-  use "tpope/vim-commentary"
-  use "psliwka/vim-smoothie"
+    -- Tabs (Buffer Line)
+    use {
+        'romgrk/barbar.nvim',
+        requires = {'kyazdani42/nvim-web-devicons'},
+        config = function() require 'k.plugins.barbar' end
+    }
 
-  use {
-    "glepnir/dashboard-nvim",
-    config = function()
-      require 'k.plugins.dashboard'
-    end
-  }
+    -- Tree
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = function() require 'k.plugins.nvim-tree' end
+    }
 
-  -- Git Integration
-  use "tpope/vim-fugitive"
-  use {
-    "TimUntersberger/neogit",
-    config = function()
-      require "k.plugins.neogit"
-    end
-  }
-  use {
-    "sindrets/diffview.nvim",
-    config = function()
-      require 'k.plugins.diffview'
-    end
-  }
-  use "kdheepak/lazygit.nvim"
+    -- Keybindings
+    use {
+        'folke/which-key.nvim',
+        config = function() require 'k.plugins.which-key' end
+    }
 
-  -- Slides
-  use "sotte/presenting.vim"
+    -- FZF
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {{'nvim-lua/plenary.nvim'}},
+        config = function() require 'k.plugins.telescope' end
+    }
 
-  -- Miscallaneous
-  use 'rcarriga/nvim-notify'
-  use {
-    'andweeb/presence.nvim',
-    config = function()
-      require 'k.plugins.presence'
-    end
-  }
+    use {
+        'neoclide/coc.nvim',
+        branch = "release",
+        config = function() require("k.plugins.coc") end,
+        requires = {
+            'sheerun/vim-polyglot', 'alampros/vim-styled-jsx', 'mattn/emmet-vim'
+        }
+    }
+
+    use "editorconfig/editorconfig-vim"
+
+    use "christoomey/vim-tmux-navigator"
+    use "tpope/vim-commentary"
+    use "psliwka/vim-smoothie"
+
+    use {
+        "glepnir/dashboard-nvim",
+        config = function() require 'k.plugins.dashboard' end
+    }
+
+    -- Git Integration
+    use "tpope/vim-fugitive"
+    use "lewis6991/gitsigns.nvim"
+    use {
+        "TimUntersberger/neogit",
+        config = function() require "k.plugins.neogit" end
+    }
+    use {
+        "sindrets/diffview.nvim",
+        config = function() require 'k.plugins.diffview' end
+    }
+    use "kdheepak/lazygit.nvim"
+
+    -- Slides
+    use "sotte/presenting.vim"
+
+    -- Miscallaneous
+    use 'rcarriga/nvim-notify'
+    use {
+        'andweeb/presence.nvim',
+        config = function() require 'k.plugins.presence' end
+    }
 
 end)
 
