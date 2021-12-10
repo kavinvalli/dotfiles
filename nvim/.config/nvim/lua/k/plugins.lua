@@ -78,7 +78,10 @@ return require('packer').startup(function()
 
     -- Git Integration
     use "tpope/vim-fugitive"
-    use "lewis6991/gitsigns.nvim"
+    use {
+        "lewis6991/gitsigns.nvim",
+        config = function() require "k.plugins.gitsigns" end
+    }
     use {
         "TimUntersberger/neogit",
         config = function() require "k.plugins.neogit" end
