@@ -30,6 +30,8 @@ vim.api.nvim_set_keymap("i", "<C-j>", "pumvisible() ? '<C-n>' : '<TAB>'", {norem
 vim.api.nvim_set_keymap("i", "<C-k>", "pumvisible() ? '<C-p>' : '<C-h>'", {noremap = true, expr = true})
 vim.api.nvim_set_keymap("i", "<CR>", "pumvisible() ? coc#_select_confirm() : '<C-G>u<CR><C-R>=coc#on_enter()<CR>'", {silent = true, expr = true, noremap = true})
 
+vim.cmd [[ command! -nargs=0 Format :call CocAction('format') ]]
+
 -- Indentation
 -- I like no tabs, and 2 spaces
 vim.bo.tabstop = 2
