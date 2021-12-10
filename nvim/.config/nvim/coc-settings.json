@@ -23,7 +23,8 @@
     "css",
     "go",
     "php",
-    "rust"
+    "rust",
+    "lua"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
@@ -34,7 +35,34 @@
       "command": "opam",
       "args": ["config", "exec", "--", "ocamllsp"],
       "filetypes": ["ocaml", "reason"]
-    }
+    },
+    "lua": {
+          "command": "/Users/kavinvalli/.config/nvim/lua-language-server/bin/macOS/lua-language-server",
+          "args": [
+            "-E",
+            "/Users/kavinvalli/.config/nvim/lua-language-server/bin/macOS/main.lua"
+          ],
+          "filetypes": ["lua"],
+          "settings": {
+            "Lua": {
+              "workspace.library": {
+                "/opt/homebrew/Cellar/neovim/0.6.0/share/nvim/runtime/lua": true,
+                "/opt/homebrew/Cellar/neovim/0.6.0/share/nvim/runtime/lua/vim": true,
+                "/opt/homebrew/Cellar/neovim/0.6.0/share/nvim/runtime/lua/vim/lsp": true
+              },
+              "diagnostics": {
+                "disable": [
+                    "undefined-global",
+                    "lowercase-global",
+                    "unused-local",
+                    "unused-vararg",
+                    "trailing-space"
+                  ],
+                "globals": [ "vim" ]
+              }  
+            }
+          }
+        }
   },
   "explorer.position": "floating",
   "explorer.icon.enableNerdfont": true,
@@ -76,7 +104,7 @@
     "typeParameter": "\uf278",
     "default": "\uf29c"
   },
-   "diagnostic.displayByAle": false,
+  "diagnostic.displayByAle": false,
   "diagnostic.refreshOnInsertMode": true,
   "diagnostic.errorSign": "✘",
   "diagnostic.warningSign": "⚠",
@@ -94,5 +122,6 @@
   "list.source.grep.command": "rg",
   "prettier.proseWrap": "always",
   "prismaLanguageServer.prismaFmtBinPath": "",
-  "prisma.prismaFmtBinPath": ""
+  "prisma.prismaFmtBinPath": "",
+  "lightbulb.enableSign": true
 }
