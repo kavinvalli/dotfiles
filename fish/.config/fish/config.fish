@@ -4,9 +4,9 @@ set GOPATH $HOME/go
 set GOBIN $HOME/go/bin
 set LDFLAGS -L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
 
-# function fish_greeting
-#     neofetch
-# end
+function fish_greeting
+    neofetch --off
+end
 
 set -x KAVIN_OS ""
 switch (uname)
