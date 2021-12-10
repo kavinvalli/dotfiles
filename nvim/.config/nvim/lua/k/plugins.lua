@@ -76,6 +76,14 @@ return require('packer').startup(function()
         config = function() require 'k.plugins.dashboard' end
     }
 
+    use {
+        "ellisonleao/glow.nvim",
+        config = function()
+            vim.g.glow_border = "rounded"
+            require "k.utils".map("n", "<C-w>z", "<C-w>|<C-w>_", {})
+        end,
+    }
+
     -- Git Integration
     use "tpope/vim-fugitive"
     use {
