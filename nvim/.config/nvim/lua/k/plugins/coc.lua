@@ -2,7 +2,7 @@ vim.g.coc_global_extensions = {
     'coc-tsserver', 'coc-lists', 'coc-json', 'coc-css', 'coc-html', 'coc-yaml',
     'coc-yank', 'coc-emmet', 'coc-prisma', 'coc-explorer', 'coc-flutter',
     'coc-prettier', 'coc-eslint', 'coc-go', 'coc-phpls', 'coc-rls', 'coc-lua',
-    'coc-tailwindcss'
+    'coc-tailwindcss', 'coc-lightbulb'
 }
 
 -- Keymap
