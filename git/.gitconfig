@@ -10,6 +10,7 @@
 [core]
   editor = nvim
   autocrlf = input
+	ignorecase = false
 [commit]
   gpgsign = true
 [pull]

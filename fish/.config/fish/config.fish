@@ -4,9 +4,9 @@ set GOPATH $HOME/go
 set GOBIN $HOME/go/bin
 set LDFLAGS -L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
 
-function fish_greeting
-    neofetch --off
-end
+# function fish_greeting
+#     neofetch --off
+# end
 
 set -x KAVIN_OS ""
 switch (uname)
@@ -43,6 +43,7 @@ fish_add_path /usr/local/opt/util-linux/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.cargo/env
 fish_add_path $HOME/kscripts
+fish_add_path $HOME/.deno/bin
 
 set LANG "en_US.UTF-8"
 set LC_ALL "en_US.UTF-8"

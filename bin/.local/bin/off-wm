@@ -1,0 +1,7 @@
+#!/bin/bash
+
+servicesList=("koekeishiya/formulae/yabai" "skhd")
+
+for service in ${servicesList[@]}; do
+  brew services stop $service
+done

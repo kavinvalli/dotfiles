@@ -1,14 +1,26 @@
 #!/usr/bin/env bash
+TSCACHE="$HOME/.dotfiles/bin/.local/bin/.tmux-sessionizer-cache"
 
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/code /Users/kavinvalli/ -mindepth 1 -maxdepth 1 -type d | sed "s/\/\//\//g" | fzf)
+    selected=$(find ~/code ~/exun /Users/kavinvalli/ -mindepth 1 -maxdepth 1 -type d | sed "s/\/\//\//g" | fzf)
 fi
 
 if [[ -z $selected ]]; then
     exit 0
 fi
+
+current_tmux_session=$(tmux display-message -p '#S')
+
+if [[ $selected == "-t" ]]; then
+    last_session=$(cat $TSCACHE)
+    bash -c "echo $current_tmux_session > $TSCACHE"
+    /opt/homebrew/bin/tmux switch-client -t $last_session
+    exit 0
+fi
+
+bash -c "echo $current_tmux_session > $TSCACHE"
 
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)

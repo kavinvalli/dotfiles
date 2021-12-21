@@ -7,4 +7,5 @@
 --   }
 -- }
 
-vim.cmd [[ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx ]]
+vim.cmd [[ autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx ]]
+vim.cmd [[ autocmd BufNewFile,BufRead *.ssx set filetype=javascript.jsx ]]

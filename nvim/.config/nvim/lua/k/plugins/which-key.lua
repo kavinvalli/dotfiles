@@ -38,7 +38,7 @@ local mappings = {
   p = {
     name = "Telescope",
     p = {
-      ":lua require(\"telescope.builtin\").find_files({ find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' } })<CR>",
+      ":lua require(\"telescope.builtin\").find_files({ hidden = true })<CR>",
       "Find Files"
     },
     f = {

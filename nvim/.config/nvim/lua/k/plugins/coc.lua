@@ -2,7 +2,7 @@ vim.g.coc_global_extensions = {
     'coc-tsserver', 'coc-lists', 'coc-json', 'coc-css', 'coc-html', 'coc-yaml',
     'coc-yank', 'coc-emmet', 'coc-prisma', 'coc-explorer', 'coc-flutter',
     'coc-prettier', 'coc-eslint', 'coc-go', 'coc-phpls', 'coc-rls', 'coc-lua',
-    'coc-tailwindcss', 'coc-lightbulb'
+    'coc-elixir',  'coc-deno', 'coc-tailwindcss', 'coc-lightbulb', 'coc-snippets', 'coc-pyright'
 }
 
 -- Keymap
@@ -25,10 +25,15 @@ vim.api.nvim_set_keymap("n", "K", ":call CocActionAsync('doHover')<cr>",
                         {noremap = true})
 vim.api.nvim_set_keymap("i", "<C-space>", "coc#refresh()",
                         {noremap = true, expr = true})
-vim.api.nvim_set_keymap("i", "<C-Space>", "coc#refresh()", { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-j>", "pumvisible() ? '<C-n>' : '<TAB>'", {noremap = true, silent = true, expr = true})
 vim.api.nvim_set_keymap("i", "<C-k>", "pumvisible() ? '<C-p>' : '<C-h>'", {noremap = true, expr = true})
 vim.api.nvim_set_keymap("i", "<CR>", "pumvisible() ? coc#_select_confirm() : '<C-G>u<CR><C-R>=coc#on_enter()<CR>'", {silent = true, expr = true, noremap = true})
+vim.api.nvim_set_keymap("i", "<Tab>", "pumvisible() ? coc#_select_confirm() : '<C-G>u<CR><C-R>=coc#on_enter()<CR>'", {silent = true, expr = true, noremap = true})
+-- vim.api.nvim_set_keymap("i", "<CR>", "<Plug>(coc-snippets-expand)", { silent = true, expr = true })
+-- vim.api.nvim_set_keymap("i", "<Tab>", "<Plug>(coc-snippets-expand)", { silent = true, expr = true })
+
+vim.g.coc_snippet_next = "<C-j>"
+vim.g.coc_snippet_prev = "<C-k>"
 
 vim.cmd [[ command! -nargs=0 Format :call CocAction('format') ]]
 

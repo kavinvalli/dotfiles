@@ -6,7 +6,7 @@ yabai -m config focus_follows_mouse          off
 yabai -m config window_placement             second_child
 yabai -m config window_topmost               off
 yabai -m config window_shadow                off
-yabai -m config window_opacity               on
+yabai -m config window_opacity               off
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        0.9
 yabai -m config window_opacity_duration      0.0
@@ -15,7 +15,7 @@ yabai -m config window_border_width          6
 # yabai -m config active_window_border_color   0xff775759
 yabai -m config active_window_border_color   0xfff7768e
 yabai -m config normal_window_border_color   0xff505050
-yabai -m rule --add app=Brave\ Browser border=off
+# yabai -m rule --add app=iTerm border=on
 yabai -m config insert_feedback_color        0xff61afef
 yabai -m config split_ratio                  0.50
 yabai -m config auto_balance                 off
