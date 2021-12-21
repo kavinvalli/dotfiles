@@ -1,20 +1,10 @@
 # Kavin's .dotfiles
 
-## Screenshots
-
-![Screenshot 2021-11-10 at 2 40 49 PM](https://user-images.githubusercontent.com/41034356/141084117-2f2c9597-c13b-4aa2-9b02-e40478187524.png)
-![Screenshot 2021-11-10 at 2 47 50 PM](https://user-images.githubusercontent.com/41034356/141085244-a84aa09a-36f7-4a6d-b3ae-39e4cfbc99e2.png)
-
-
 ## Stuff I Use
 
 > Note: all these have to be installed
 
 - [iTerm2](https://iterm2.com/) - Terminal
-- [yabai](https://github.com/xorpse/yabai/) - Window Manager
-- [skhd](https://github.com/koekeishiya/skhd/) - Hotkey deamon (used with yabai)
-- [uebersicht](https://github.com/felixhageloh/uebersicht) - Desktop widgets
-- [simple-bar](https://simple-bar.com/en/) - Status Bar (used with uebersicht)
 - [fish](https://fishshell.com) - Shell
 - [neovim](https://neovim.io/) - Editor
 - [tmux](https://github.com/tmux/tmux) - Terminal Multiplexer
@@ -28,8 +18,6 @@ Install the following too
 - [vim-plug](https://github.com/junegunn/vim-plug) - Plugin Manager for Neovim
 - [tpm](https://github.com/tmux-plugins/tpm) - Plugin Manager for Tmux
 - [GNU Stow](https://www.gnu.org/software/stow/) - Symlink manager
-- [stackline](https://github.com/AdamWagner/stackline/) - Visual window stacks
-  with yabai
 
 ### Some more optional dependencies for some fish functions
 
