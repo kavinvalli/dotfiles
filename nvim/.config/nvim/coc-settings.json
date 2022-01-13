@@ -24,7 +24,7 @@
     "go",
     "php",
     "rust",
-    "lua"
+    "lua",
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
@@ -123,5 +123,5 @@
   "prettier.proseWrap": "always",
   "prismaLanguageServer.prismaFmtBinPath": "",
   "prisma.prismaFmtBinPath": "",
-  "lightbulb.enableSign": true
+  "lightbulb.enableSign": true,
 }

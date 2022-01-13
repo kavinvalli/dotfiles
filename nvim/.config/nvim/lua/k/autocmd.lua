@@ -8,4 +8,4 @@
 -- }
 
 vim.cmd [[ autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx ]]
-vim.cmd [[ autocmd BufNewFile,BufRead *.ssx set filetype=javascript.jsx ]]
+vim.cmd [[ autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact ]]

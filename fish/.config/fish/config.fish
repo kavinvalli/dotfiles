@@ -44,6 +44,7 @@ fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.cargo/env
 fish_add_path $HOME/kscripts
 fish_add_path $HOME/.deno/bin
+fish_add_path $HOME/.volta/bin
 
 set LANG "en_US.UTF-8"
 set LC_ALL "en_US.UTF-8"
@@ -92,5 +93,5 @@ set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $comment
 
 test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
+
+ulimit -n 65536

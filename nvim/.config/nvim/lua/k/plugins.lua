@@ -7,7 +7,8 @@ return require('packer').startup(function()
     -- Colorscheme
     use {
         -- 'shaunsingh/nord.nvim',
-        'folke/tokyonight.nvim',
+        -- 'folke/tokyonight.nvim',
+        'frenzyexists/aquarium-vim',
         config = function() require 'k.themeing' end
     }
 
