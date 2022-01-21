@@ -25,6 +25,7 @@
     "php",
     "rust",
     "lua",
+    "dart"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
@@ -124,4 +125,6 @@
   "prismaLanguageServer.prismaFmtBinPath": "",
   "prisma.prismaFmtBinPath": "",
   "lightbulb.enableSign": true,
+  "python.pythonPath": "/opt/homebrew/bin/python3",
+  "flutter.trace.server": "on"
 }

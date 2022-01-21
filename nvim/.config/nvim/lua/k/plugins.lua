@@ -8,7 +8,8 @@ return require('packer').startup(function()
     use {
         -- 'shaunsingh/nord.nvim',
         -- 'folke/tokyonight.nvim',
-        'frenzyexists/aquarium-vim',
+        -- 'frenzyexists/aquarium-vim',
+        'Mangeshrex/uwu.vim',
         config = function() require 'k.themeing' end
     }
 
@@ -109,6 +110,11 @@ return require('packer').startup(function()
     use {
         'andweeb/presence.nvim',
         config = function() require 'k.plugins.presence' end
+    }
+
+    use {
+        'folke/todo-comments.nvim',
+        config = function() require("todo-comments").setup {} end
     }
 
 end)

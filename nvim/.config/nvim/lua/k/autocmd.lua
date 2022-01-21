@@ -9,3 +9,4 @@
 
 vim.cmd [[ autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx ]]
 vim.cmd [[ autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact ]]
+vim.cmd [[ autocmd BufNewFile,BufRead *.prisma set filetype=prisma ]]

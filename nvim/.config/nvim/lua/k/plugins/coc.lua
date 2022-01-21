@@ -13,6 +13,7 @@ vim.api.nvim_set_keymap("n", "gr", "<Plug>(coc-references)", {})
 vim.api.nvim_set_keymap("n", "[g", "<Plug>(coc-diagnostic-prev)", {})
 vim.api.nvim_set_keymap("n", "]g", "<Plug>(coc-diagnostic-next)", {})
 vim.api.nvim_set_keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
+vim.api.nvim_set_keymap("n", "<leader>dc", "<Plug>(coc-codeaction-selected)", {})
 vim.api.nvim_set_keymap("n", "<leader>do", ":CocAction<cr>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<leader>d", ":<C-u>CocList diagnostics<cr>",
                         {noremap = true})

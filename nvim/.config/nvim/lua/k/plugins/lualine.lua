@@ -180,6 +180,6 @@ local lualine = require 'lualine'
 -- lualine.setup(config)
 lualine.setup {
   options = {
-    theme = "aquarium"
+    theme = "horizon"
   }
 }
