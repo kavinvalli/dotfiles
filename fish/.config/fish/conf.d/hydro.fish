@@ -103,7 +103,7 @@ set --query hydro_symbol_prompt || set --global hydro_symbol_prompt ❱
 set --query hydro_symbol_git_dirty || set --global hydro_symbol_git_dirty •
 set --query hydro_symbol_git_ahead || set --global hydro_symbol_git_ahead ↑
 set --query hydro_symbol_git_behind || set --global hydro_symbol_git_behind ↓
-set hydro_color_pwd 9d7cd8
-set hydro_color_git 7dcfff
-set hydro_color_prompt 7dcfff
+set hydro_color_pwd $fish_color_cwd
+set hydro_color_git $fish_color_host
+set hydro_color_prompt $fish_color_host
 set hydro_color_duration $fish_color_error

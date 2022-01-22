@@ -9,7 +9,9 @@ return require('packer').startup(function()
         -- 'shaunsingh/nord.nvim',
         -- 'folke/tokyonight.nvim',
         -- 'frenzyexists/aquarium-vim',
-        'Mangeshrex/uwu.vim',
+        -- 'Mangeshrex/uwu.vim',
+        'catppuccin/nvim',
+        as = 'catppuccin',
         config = function() require 'k.themeing' end
     }
 
