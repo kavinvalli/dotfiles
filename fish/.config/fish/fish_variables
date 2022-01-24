@@ -168,10 +168,10 @@ SETUVAR _hydro_git_35713:master\u2022\x20
 SETUVAR _hydro_git_41824:develop\x20
 SETUVAR _hydro_git_50063:develop\x20
 SETUVAR _hydro_git_50808:master\u2022\x20\u21911\x20
-SETUVAR _hydro_git_64748:master\u2022\x20
 SETUVAR _hydro_git_65159:master\u2022\x20
 SETUVAR _hydro_git_77268:master\u2022\x20
 SETUVAR _hydro_git_88587:master\u2022\x20\u21911\x20
+SETUVAR _hydro_git_955:master\u2022\x20\u21911\x20
 SETUVAR fish_color_autosuggestion:6e6a86
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:c4a7e7

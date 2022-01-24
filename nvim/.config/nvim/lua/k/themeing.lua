@@ -57,4 +57,4 @@ catppuccin.setup {
   }
 }
 
-vim.cmd("colorscheme uwu")
+vim.cmd("colorscheme catppuccin")

@@ -87,6 +87,7 @@ return require('packer').startup(function()
             require "k.utils".map("n", "<C-w>z", "<C-w>|<C-w>_", {})
         end,
     }
+    use 'vimwiki/vimwiki'
 
     -- Git Integration
     use "tpope/vim-fugitive"
