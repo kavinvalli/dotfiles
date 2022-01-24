@@ -8,6 +8,16 @@ function fish_greeting
     neofetch --off
 end
 
+fish_add_path /usr/local/bin
+fish_add_path /usr/local/bin/fish
+fish_add_path /usr/bin
+fish_add_path /usr/local/opt/util-linux/bin
+fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.cargo/env
+fish_add_path $HOME/kscripts
+fish_add_path $HOME/.deno/bin
+fish_add_path $HOME/.volta/bin
+
 set -x KAVIN_OS ""
 switch (uname)
     case Linux
@@ -35,16 +45,6 @@ function fish_user_key_bindings
 end
 
 set -x GPG_TTY (tty)
-
-fish_add_path /usr/local/bin
-fish_add_path /usr/local/bin/fish
-fish_add_path /usr/bin
-fish_add_path /usr/local/opt/util-linux/bin
-fish_add_path $HOME/.local/bin
-fish_add_path $HOME/.cargo/env
-fish_add_path $HOME/kscripts
-fish_add_path $HOME/.deno/bin
-fish_add_path $HOME/.volta/bin
 
 set LANG "en_US.UTF-8"
 set LC_ALL "en_US.UTF-8"
