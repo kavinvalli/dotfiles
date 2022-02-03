@@ -3,6 +3,7 @@ stackline:init()
 
 require("hs.ipc")
 
+Khyper = {"ctrl", "alt"}
 KPhyper = {"cmd", "alt", "ctrl"}
 KPhypershift = {"cmd", "alt", "ctrl", "shift"}
 
@@ -14,9 +15,10 @@ local applicationHotkeys = {
   i = 'iTerm',
   w = 'Whatsapp',
   d = 'Discord',
+  f = 'Finder'
 }
 for key, app in pairs(applicationHotkeys) do
-  hs.hotkey.bind(KPhyper, key, function()
+  hs.hotkey.bind(Khyper, key, function()
     hs.application.launchOrFocus(app)
   end)
 end
@@ -27,6 +29,6 @@ hs.hotkey.bind(KPhypershift, "D", spotify.nextNotify)
 hs.hotkey.bind(KPhypershift, "A", spotify.prevNotify)
 
 --AltTab
--- hs.hotkey.bind(KPhypershift, "`", alttab.changeFocus)
--- hs.hotkey.bind(KPhyper, '`', alttab.switchDev)
--- hs.hotkey.bind(KPhyper, 'tab', alttab.switch)
+hs.hotkey.bind(KPhypershift, "`", alttab.changeFocus)
+hs.hotkey.bind(KPhyper, '`', alttab.switchDev)
+hs.hotkey.bind(KPhyper, 'tab', alttab.switch)

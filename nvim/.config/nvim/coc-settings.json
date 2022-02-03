@@ -6,7 +6,8 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "dart"
+    "dart",
+    "html"
   ],
   "prettier.disableSuccessMessage": true,
   "coc.preferences.formatOnSaveFiletypes": [
@@ -21,6 +22,7 @@
     "prisma",
     "elixir",
     "css",
+    "scss",
     "go",
     "php",
     "rust",

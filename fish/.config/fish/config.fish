@@ -54,8 +54,8 @@ set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 set -U DOCKERFORMAT "ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
 set -U EDITOR nvim
 
-source ~/aliases.sh
-source ~/url-env.sh
+source ~/.dotfiles/aliases.sh
+source ~/.dotfiles/url-env.sh
 test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 
 ulimit -n 65536

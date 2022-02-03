@@ -1,5 +1,5 @@
 README.md
-iterm
 \.git
 \.gitignore
 Brewfile
+/fish/.config/fish/fish_variables

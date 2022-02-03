@@ -1,5 +1,5 @@
 nvim/.config/nvim/plugged
-scripts/url-env.sh
+url-env.sh
 git/.config/gh/hosts.yml
 nvim/.config/nvim/lua-language-server
 bin/.local/bin/.tmux-sessionizer-cache
