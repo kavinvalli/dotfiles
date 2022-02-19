@@ -5,7 +5,7 @@
   process = git-lfs filter-process
 [user]
   name = Kavin Valli
-  email = kavinvalli@gmail.com
+  email = mail@kavin.me
   signingkey = BB2A0B15D1BCAD86
 [core]
   editor = nvim
