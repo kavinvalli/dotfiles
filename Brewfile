@@ -17,6 +17,7 @@ brew "pinentry-mac"
 brew "ripgrep"
 brew "gh"
 brew "diff-so-fancy"
+brew "git-delta"
 
 cask "flutter"
 cask "phpmon"

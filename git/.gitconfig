@@ -11,9 +11,13 @@
   editor = nvim
   autocrlf = input
 	ignorecase = false
-  pager = "diff-so-fancy | less --tabs=4 -RFX"
+  pager = "delta"
 [interactive]
-  diffFilter = "diff-so-fancy --patch"
+  diffFilter = "delta --color-only"
+[delta]
+  navigate = true
+[merge]
+  conflictstyle = diff3
 [commit]
   gpgsign = true
 [pull]
@@ -33,6 +37,7 @@
 	newHighlight = green bold 22
 [color "diff"]
 	meta = 11
+  colorMoved = default
 	frag = magenta bold
 	commit = yellow bold
 	old = red bold
