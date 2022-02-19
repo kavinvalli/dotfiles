@@ -1,3 +1,5 @@
+tap "nicoverbruggen/homebrew-cask"
+
 brew 'tmux'
 brew 'nvim'
 brew 'fish'
@@ -14,5 +16,7 @@ brew "gpg2"
 brew "pinentry-mac"
 brew "ripgrep"
 brew "gh"
+brew "diff-so-fancy"
 
 cask "flutter"
+cask "phpmon"
