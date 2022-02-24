@@ -120,5 +120,7 @@ return require('packer').startup(function()
         config = function() require("todo-comments").setup {} end
     }
 
+    use "github/copilot.vim"
+
 end)
 
