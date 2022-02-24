@@ -17,6 +17,7 @@ fish_add_path $HOME/.cargo/env
 fish_add_path $HOME/kscripts
 fish_add_path $HOME/.deno/bin
 fish_add_path $HOME/.volta/bin
+fish_add_path $HOME/.spicetify
 
 set -x KAVIN_OS ""
 switch (uname)
