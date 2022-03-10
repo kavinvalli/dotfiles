@@ -65,9 +65,11 @@ return require('packer').startup(function()
         branch = "release",
         config = function() require("k.plugins.coc") end,
         requires = {
-            'sheerun/vim-polyglot', 'alampros/vim-styled-jsx', 'mattn/emmet-vim', 'jiangmiao/auto-pairs'
+            'sheerun/vim-polyglot', 'alampros/vim-styled-jsx', 'mattn/emmet-vim', 'jiangmiao/auto-pairs', 'jparise/vim-graphql'
         }
     }
+
+    use {'luizribeiro/vim-cooklang', ft = "cook"}
 
     use "editorconfig/editorconfig-vim"
 
