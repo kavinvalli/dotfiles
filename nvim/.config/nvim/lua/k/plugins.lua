@@ -10,8 +10,9 @@ return require('packer').startup(function()
         -- 'folke/tokyonight.nvim',
         -- 'frenzyexists/aquarium-vim',
         -- 'Mangeshrex/uwu.vim',
-        'catppuccin/nvim',
-        as = 'catppuccin',
+        -- 'catppuccin/nvim',
+        -- as = 'catppuccin',
+        'haishanh/night-owl.vim',
         config = function() require 'k.themeing' end
     }
 
@@ -108,7 +109,9 @@ return require('packer').startup(function()
     use "kdheepak/lazygit.nvim"
 
     -- Slides
-    use "sotte/presenting.vim"
+    use {
+        "sotte/presenting.vim",
+    }
 
     -- Miscallaneous
     use 'rcarriga/nvim-notify'
