@@ -68,3 +68,5 @@ opt.suffixesadd = { '.md', '.js', '.ts', '.tsx' } -- File extensions not require
 opt.writebackup = false
 opt.updatetime = 300
 opt.timeoutlen = 100
+
+vim.g.laststatus = 0

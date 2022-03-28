@@ -180,6 +180,6 @@ local lualine = require 'lualine'
 -- lualine.setup(config)
 lualine.setup {
   options = {
-    theme = "catppuccin"
+    theme = "auto",
   }
 }
