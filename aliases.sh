@@ -33,3 +33,11 @@ alias nrd="npm run dev -s --"
 alias nrb="npm run build -s --"
 alias nrd="npm run dev -s --"
 alias nu="npx npm-check-updates --dep prod,dev --upgrade"
+
+# yarn aliases
+alias yi="npm install"
+alias yrs="npm run start -s --"
+alias yrd="npm run dev -s --"
+alias yrb="npm run build -s --"
+alias yrd="npm run dev -s --"
+alias yu="npx npm-check-updates --dep prod,dev --upgrade"

@@ -64,7 +64,7 @@
   pl = pull
   plo = pull origin
   plom = pull origin master
-  cl = clone
+	cl = clone
   a = add
   d = diff
 [init]

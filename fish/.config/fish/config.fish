@@ -39,6 +39,7 @@ switch (uname)
 end
 
 bind -M insert \ca tmux-sessionizer
+bind -M insert \cg "gh repo-fzf"
 
 function fish_user_key_bindings
     fish_vi_key_bindings
@@ -60,3 +61,7 @@ source ~/.dotfiles/url-env.sh
 test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 
 ulimit -n 65536
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
