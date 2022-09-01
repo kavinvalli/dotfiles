@@ -18,6 +18,10 @@ fish_add_path $HOME/kscripts
 fish_add_path $HOME/.deno/bin
 fish_add_path $HOME/.volta/bin
 fish_add_path $HOME/.spicetify
+fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/.local/share/solana/install/active_release/bin
+
+set NVM_DIR "$HOME/.nvm"
 
 set -x KAVIN_OS ""
 switch (uname)
@@ -65,3 +69,8 @@ ulimit -n 65536
 # tabtab source for packages
 # uninstall by removing these lines
 [ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
+
+# bun
+set -Ux BUN_INSTALL "/Users/kavinvalli/.bun"
+fish_add_path "/Users/kavinvalli/.bun/bin"
+
