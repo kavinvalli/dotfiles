@@ -6,11 +6,13 @@ M.plugins = {
   override = {
     ["williamboman/mason.nvim"] = pluginConfs.mason,
     ["nvim-treesitter/nvim-treesitter"] = pluginConfs.treesitter,
+    ["numToStr/Comment.nvim"] = pluginConfs.comment,
+    ["NvChad/ui"] = pluginConfs.ui,
   },
 }
 
 M.ui = {
-  theme = "jellybeans",
+  theme = "tokyodark",
 }
 
 M.mappings = require("custom.mappings")

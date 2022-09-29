@@ -1,1 +1,0 @@
-highlight TreesitterContext guibg=red

@@ -12,8 +12,9 @@ M.treesitter = {
     "lua",
     "markdown",
     "yaml",
-    "astro"
-  }
+    "astro",
+    "python",
+  },
 }
 
 M.mason = {
@@ -25,7 +26,20 @@ M.mason = {
     "json-lsp",
     "tailwindcss-language-server",
     "astro-language-server",
+    "pyright",
+    "rust-analyzer",
+    "intelephense"
    },
+}
+--
+M.comment = {
+  pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+}
+
+M.ui = {
+  statusline = {
+    separator_style = "block",
+  },
 }
 
 return M

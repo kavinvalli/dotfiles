@@ -21,13 +21,28 @@ M.general = {
     },
     ['wv'] = {
       "<C-w>t<C-w>H", "Switch to vertical pane"
-    }
+    },
+    [">>"] = {">gv"},
+    ["<<"] = {"<gv"},
   },
+  v = {
+    ["<tab>"] = {">gv"},
+    ["<S-tab>"] = {"<gv"},
+    [">"] = {">gv"},
+    ["<"] = {"<gv"},
+  }
 }
 
 M.lazygit = {
   n = {
     ["<leader>g"] = {":LazyGit<CR>", "Lazy Git"}
+  }
+}
+
+M.telescope = {
+  plugin = true,
+  n = {
+    ["<leader>fp"] = {"<cmd> Telescope file_browser <CR>", "file browser"},
   }
 }
 

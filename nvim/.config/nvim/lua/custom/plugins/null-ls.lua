@@ -9,8 +9,11 @@ local b = null_ls.builtins
 local sources = {
 
   b.formatting.prettier.with { filetypes = { "html", "markdown", "css", "javascript", "javascriptreact", "typescript", "typescriptreact", "astro" } },
+  b.formatting.autopep8,
+  b.formatting.rustfmt,
   b.diagnostics.eslint,
-  b.code_actions.eslint_id
+  b.diagnostics.php,
+  b.code_actions.eslint_id,
 
 }
 
