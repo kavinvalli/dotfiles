@@ -25,7 +25,23 @@
 [http]
   sslVerify = true
 [color]
-  ui = true
+  ui = auto
+
+[color "branch"]
+  current = yellow
+  local = 241
+  remote = green
+
+[color "diff"]
+  meta = yellow
+  frag = magenta
+  old = red
+  new = green
+
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = magenta
 [github]
   user = kavinvalli
 [merge "ours"]
@@ -44,6 +60,7 @@
 	new = green bold
 	whitespace = red reverse
 [alias]
+  r = !GIT_NO_PAGER=1 git l -30
   co = checkout
   c = commit -m
   caa = commit -am
@@ -53,7 +70,8 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
-  l = log --oneline
+  ; l = log --oneline
+  l = "!. ~/.githelpers && pretty_git_log"
   last = log -1
   lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
   p = push
@@ -69,3 +87,5 @@
   d = diff
 [init]
   defaultBranch = main
+[url "git@github.com:"]
+  insteadOf = https://github.com/

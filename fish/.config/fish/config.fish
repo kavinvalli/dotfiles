@@ -15,8 +15,14 @@ source ~/.config/fish/mappings.fish # Mappings
 source ~/.config/fish/paths.fish # Paths
 source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/url-env.sh
+source ~/.dotfiles/exa/EXACOLORS
 
 function fish_user_key_bindings
   fish_vi_key_bindings
   bind -M insert jk "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
 end
+
+# pnpm
+set -gx PNPM_HOME "/Users/kavinvalli/Library/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end

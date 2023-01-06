@@ -3,3 +3,4 @@ README.md
 \.gitignore
 Brewfile
 /fish/.config/fish/fish_variables
+/tmux/falcon.tmux.conf

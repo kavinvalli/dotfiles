@@ -1,19 +1,27 @@
 local M = {}
 
 M.treesitter = {
+  indent = {
+    enable = false,
+    disable = {},
+  },
   ensure_installed = {
     "html",
     "css",
     "vim",
     "sql",
     "javascript",
+    "tsx",
     "typescript",
     "json",
     "lua",
     "markdown",
+    "markdown_inline",
     "yaml",
     "astro",
     "python",
+    "prisma",
+    "fish"
   },
 }
 
@@ -28,18 +36,13 @@ M.mason = {
     "astro-language-server",
     "pyright",
     "rust-analyzer",
-    "intelephense"
+    "intelephense",
+    "prisma-language-server"
    },
 }
---
+
 M.comment = {
   pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
-}
-
-M.ui = {
-  statusline = {
-    separator_style = "block",
-  },
 }
 
 return M

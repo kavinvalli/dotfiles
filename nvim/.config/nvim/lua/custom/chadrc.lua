@@ -7,13 +7,22 @@ M.plugins = {
     ["williamboman/mason.nvim"] = pluginConfs.mason,
     ["nvim-treesitter/nvim-treesitter"] = pluginConfs.treesitter,
     ["numToStr/Comment.nvim"] = pluginConfs.comment,
-    ["NvChad/ui"] = pluginConfs.ui,
   },
 }
 
 M.ui = {
-  theme = "tokyodark",
+  theme = "falcon",
+  transparency = true,
+  hl_override = {
+    Visual = {
+      bg = "#525252"
+    }
+  },
+  statusline = {
+    separator_style = "block",
+  },
 }
+
 
 M.mappings = require("custom.mappings")
 

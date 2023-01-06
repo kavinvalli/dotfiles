@@ -22,20 +22,28 @@ M.general = {
     ['wv'] = {
       "<C-w>t<C-w>H", "Switch to vertical pane"
     },
-    [">>"] = {">gv"},
-    ["<<"] = {"<gv"},
+    ["J"] = {"mzJ`z"},
+    ["<C-d>"] = {"<C-d>zz"},
+    ["<C-u>"] = {"<C-u>zz"},
+    ["n"] = {"nzzzv"},
+    ["N"] = {"Nzzzv"},
   },
   v = {
     ["<tab>"] = {">gv"},
     ["<S-tab>"] = {"<gv"},
     [">"] = {">gv"},
     ["<"] = {"<gv"},
+    ["J"] = {":m '>+1<CR>gv=gv"},
+    ["K"] = {":m '<-2<CR>gv=gv"}
+  },
+  x = {
+    ["<leader>p"] = {"\"_dP"}
   }
 }
 
-M.lazygit = {
+M.neogit = {
   n = {
-    ["<leader>g"] = {":LazyGit<CR>", "Lazy Git"}
+    ["<leader>g"] = {":Neogit<CR>", "Neogit"}
   }
 }
 
@@ -46,4 +54,30 @@ M.telescope = {
   }
 }
 
+M.harpoon = {
+  n = {
+    ['ma'] = {":lua require(\"harpoon.mark\").add_file()<CR>", "Harpoon Add file"},
+    ['m1'] = {":lua require(\"harpoon.ui\").nav_file(1)<CR>", "Navigate Harpoon 1"},
+    ['m2'] = {":lua require(\"harpoon.ui\").nav_file(2)<CR>", "Navigate Harpoon 2"},
+    ['m3'] = {":lua require(\"harpoon.ui\").nav_file(3)<CR>", "Navigate Harpoon 3"},
+    ['m4'] = {":lua require(\"harpoon.ui\").nav_file(4)<CR>", "Navigate Harpoon 4"},
+    ['m5'] = {":lua require(\"harpoon.ui\").nav_file(5)<CR>", "Navigate Harpoon 5"},
+    ['m6'] = {":lua require(\"harpoon.ui\").nav_file(6)<CR>", "Navigate Harpoon 6"},
+    ['m7'] = {":lua require(\"harpoon.ui\").nav_file(7)<CR>", "Navigate Harpoon 7"},
+    ['m8'] = {":lua require(\"harpoon.ui\").nav_file(8)<CR>", "Navigate Harpoon 8"},
+    ['m9'] = {":lua require(\"harpoon.ui\").nav_file(9)<CR>", "Navigate Harpoon 9"},
+    ['<leader>h'] = {":lua require(\"harpoon.ui\").nav_file(1)<CR>", "Navigate Harpoon 1"},
+    ['<leader>j'] = {":lua require(\"harpoon.ui\").nav_file(2)<CR>", "Navigate Harpoon 2"},
+    ['<leader>k'] = {":lua require(\"harpoon.ui\").nav_file(3)<CR>", "Navigate Harpoon 3"},
+    ['<leader>l'] = {":lua require(\"harpoon.ui\").nav_file(4)<CR>", "Navigate Harpoon 4"},
+    ['mv'] = {":lua require(\"harpoon.ui\").toggle_quick_menu()<CR>", "Harpoon menu"},
+  }
+}
+
+-- M.undotree = {
+--   n = {
+--     ['ut'] = {":UndotreeToggle<CR>", "Toggle Undo Tree"}
+--   }
+-- }
+--
 return M

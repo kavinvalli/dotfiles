@@ -1,5 +1,6 @@
 # general aliases
-alias la="ls -al"
+alias ls="exa"
+alias la="ls -al --git"
 alias rc="source $HOME/.config/fish/config.fish"
 alias u="url"
 alias al="add_alias"
@@ -8,6 +9,7 @@ alias b="browse"
 alias fulldate="date +%A,\ %d\ %b,\ %l:%M\ %p"
 alias sail="./vendor/bin/sail"
 alias sac="source env/bin/activate.fish"
+alias rm="trash"
 
 # notes cli aliases
 alias n="notes"
@@ -16,9 +18,10 @@ alias ns="notes -s"
 # navigation aliases
 alias c="cd ~/dev/code"
 alias e="cd ~/dev/exun"
+alias cn="cd ~/.config"
+alias dt="cd ~/.dotfiles"
 
 # dotfile aliases
-alias dt="cd ~/.dotfiles"
 alias dot="tmux attach-session -t _dotfiles"
 alias fishrc="nvim ~/.dotfiles/.config/fish/config.fish"
 alias nvimrc="nvim ~/.dotfiles/.config/nvim/init.vim"
