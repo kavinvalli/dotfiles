@@ -26,3 +26,4 @@ end
 set -gx PNPM_HOME "/Users/kavinvalli/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
+fish_add_path /Users/kavinvalli/.spicetify

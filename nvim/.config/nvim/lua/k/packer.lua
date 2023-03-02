@@ -76,9 +76,23 @@ return require("packer").startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 
-	use({
-		"lukas-reineke/headlines.nvim",
-	})
+	-- use({
+	-- 	"lukas-reineke/headlines.nvim",
+	-- })
 
 	use("github/copilot.vim")
+
+	use({
+		"roobert/tailwindcss-colorizer-cmp.nvim",
+		-- optionally, override the default options:
+		config = function()
+			require("tailwindcss-colorizer-cmp").setup({
+				color_square_width = 2,
+			})
+		end,
+	})
+
+	use("NvChad/nvim-colorizer.lua")
+
+	use("kdheepak/lazygit.nvim")
 end)

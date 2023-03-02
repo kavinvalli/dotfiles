@@ -11,6 +11,7 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
+		formatting.autopep8,
 		diagnostics.eslint_d,
 	},
 	on_attach = function(client, bufnr)

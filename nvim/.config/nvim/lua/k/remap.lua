@@ -16,3 +16,5 @@ vim.keymap.set("v", "J", ":move '>+1<CR>gv-gv")
 vim.keymap.set("v", "K", ":move '<-2<CR>gv-gv")
 
 vim.keymap.set("n", "<C-a>", ':!tmux display-popup -E "~/.local/bin/tmux-sessionizer"<CR>')
+
+vim.keymap.set("n", "<leader>kc", ":g/console.log/d<cr>")

@@ -80,6 +80,11 @@ lspconfig["clangd"].setup({
 	on_attach = on_attach,
 })
 
+lspconfig["pyright"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 lspconfig["sumneko_lua"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
@@ -97,3 +102,6 @@ lspconfig["sumneko_lua"].setup({
 		},
 	},
 })
+
+vim.g.markdown_fenced_languages =
+	{ "html", "javascript", "typescript", "css", "scss", "json", "yaml", "bash", "sh", "vim", "lua", "python" }

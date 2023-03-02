@@ -26,6 +26,7 @@ mason_lspconfig.setup({
 		"astro",
 		"prismals",
 		"clangd",
+		"pyright",
 	},
 })
 
@@ -34,5 +35,6 @@ mason_null_ls.setup({
 		"prettier",
 		"stylua",
 		"eslint_d",
+		"autopep8",
 	},
 })
