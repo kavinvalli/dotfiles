@@ -15,13 +15,17 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	use({
-		"fenetikm/falcon",
-		config = function()
-			vim.cmd("set termguicolors")
-			vim.cmd("colorscheme falcon")
-		end,
-	})
+	-- use({
+	-- 	"fenetikm/falcon",
+	-- 	config = function()
+	-- 		vim.cmd("set termguicolors")
+	-- 		vim.cmd("colorscheme falcon")
+	-- 	end,
+	-- })
+
+	use({ "catppuccin/nvim", as = "catppuccin" })
+
+	use("echasnovski/mini.nvim")
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -47,6 +51,18 @@ return require("packer").startup(function(use)
 		"numToStr/Comment.nvim",
 		config = function()
 			require("Comment").setup()
+		end,
+	})
+
+	use({
+		"JoosepAlviste/nvim-ts-context-commentstring",
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				context_commentstring = {
+					enable = true,
+					enable_autocmd = false,
+				},
+			})
 		end,
 	})
 

@@ -10,9 +10,11 @@ set -x GPG_TTY (tty)
 
 ulimit -n 65536
 
+source ~/.config/fish/paths.fish # Paths
+set -x PATH "/opt/homebrew/bin" $PATH
+set -x PATH "/usr/local/bin" $PATH
 source ~/.config/fish/tokyonight.fish # THEME
 source ~/.config/fish/mappings.fish # Mappings
-source ~/.config/fish/paths.fish # Paths
 source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/url-env.sh
 source ~/.dotfiles/exa/EXACOLORS
@@ -27,3 +29,12 @@ set -gx PNPM_HOME "/Users/kavinvalli/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
 fish_add_path /Users/kavinvalli/.spicetify
+
+function fish_greeting
+  colorscript random
+  # neofetch
+end
+
+# Setting PATH for Python 3.10
+# The original version is saved in /Users/kavinvalli/.config/fish/config.fish.pysave
+set -x PATH "/Library/Frameworks/Python.framework/Versions/3.10/bin" "$PATH"

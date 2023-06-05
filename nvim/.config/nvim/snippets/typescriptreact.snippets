@@ -1,0 +1,12 @@
+# :help filename-modifiers
+
+snippet fc "React Function Typescript Component"
+	type ${1:`expand('%:t:r')`}Props = {
+
+	}
+
+	const ${1:`expand('%:t:r')`} = ({}: ${1:`expand('%:t:r')`}Props) => {
+		return (
+			${0:<div>`expand('%:t:r')`</div>}
+		);
+	};

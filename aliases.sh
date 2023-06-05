@@ -1,5 +1,5 @@
 # general aliases
-alias ls="exa"
+alias ls="exa --color=always --group-directories-first"
 alias la="ls -al --git"
 alias rc="source $HOME/.config/fish/config.fish"
 alias u="url"
@@ -46,3 +46,14 @@ alias yrb="yarn build -s --"
 alias yrd="yarn dev -s --"
 alias yrw="yarn watch -s --"
 alias yu="npx npm-check-updates --dep prod,dev --upgrade"
+
+# pnpm aliases
+alias pi="pnpm install"
+alias prs="pnpm start -s --"
+alias prd="pnpm dev -s --"
+alias prb="pnpm build -s --"
+alias prd="pnpm dev -s --"
+alias prw="pnpm watch -s --"
+alias pu="npx npm-check-updates --dep prod,dev --upgrade"
+
+alias repo="gh repo view --web"
