@@ -4,7 +4,7 @@ TSCACHE="$HOME/.dotfiles/bin/.local/bin/.tmux-sessionizer-cache"
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/dev/code ~/dev/exun /Users/kavinvalli/ ~/dev/code/laravel-projects ~/dev/exun/laravel-projects -mindepth 1 -maxdepth 1 -type d | sed "s/\/\//\//g" | fzf --margin 5% --padding 5% --preview 'ls {}' --color=fg:#c0caf5,bg:#11121D,hl:#bb9af7 \
+    selected=$(find ~/dev/code ~/dev/exun ~/dev/csc /Users/kavinvalli/ ~/dev/code/laravel-projects ~/dev/exun/laravel-projects -mindepth 1 -maxdepth 1 -type d | sed "s/\/\//\//g" | fzf --margin 5% --padding 5% --preview 'ls {}' --color=fg:#c0caf5,bg:#11121D,hl:#bb9af7 \
 	--color=fg+:#c0caf5,bg+:#1a1b26,hl+:#7dcfff \
 	--color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
 	--color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a)

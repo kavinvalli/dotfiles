@@ -49,6 +49,7 @@ alias yu="npx npm-check-updates --dep prod,dev --upgrade"
 
 # pnpm aliases
 alias pi="pnpm install"
+alias pa="pnpm add"
 alias prs="pnpm start -s --"
 alias prd="pnpm dev -s --"
 alias prb="pnpm build -s --"

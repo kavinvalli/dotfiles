@@ -10,7 +10,6 @@ return require("packer").startup(function(use)
 
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
@@ -48,20 +47,21 @@ return require("packer").startup(function(use)
 	use("tpope/vim-surround")
 
 	use({
-		"numToStr/Comment.nvim",
+		"JoosepAlviste/nvim-ts-context-commentstring",
 		config = function()
-			require("Comment").setup()
+			require("ts_context_commentstring").setup({
+				enable_autocmd = false,
+			})
+			vim.g.skip_ts_context_commentstring_module = true
 		end,
 	})
 
 	use({
-		"JoosepAlviste/nvim-ts-context-commentstring",
+		"numToStr/Comment.nvim",
+		requires = "JoosepAlviste/nvim-ts-context-commentstring",
 		config = function()
-			require("nvim-treesitter.configs").setup({
-				context_commentstring = {
-					enable = true,
-					enable_autocmd = false,
-				},
+			require("Comment").setup({
+				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
 			})
 		end,
 	})

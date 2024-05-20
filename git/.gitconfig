@@ -85,6 +85,7 @@
 	cl = clone
   a = add
   d = diff
+  uc = reset --soft HEAD~1
 [init]
   defaultBranch = main
 [url "git@github.com:"]
