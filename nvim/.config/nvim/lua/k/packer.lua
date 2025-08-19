@@ -40,7 +40,7 @@ return require("packer").startup(function(use)
 		requires = {
 			"nvim-tree/nvim-web-devicons", -- optional, for file icons
 		},
-		tag = "nightly", -- optional, updated every week. (see issue #1193)
+		-- tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
 
 	use("tpope/vim-fugitive")
@@ -90,13 +90,13 @@ return require("packer").startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 
 	use("nvim-lualine/lualine.nvim")
-	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
 	-- use({
 	-- 	"lukas-reineke/headlines.nvim",
 	-- })
 
-	use("github/copilot.vim")
+	-- use("github/copilot.vim")
 
 	use({
 		"roobert/tailwindcss-colorizer-cmp.nvim",

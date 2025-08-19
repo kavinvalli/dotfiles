@@ -1,5 +1,5 @@
 # general aliases
-alias ls="exa --color=always --group-directories-first"
+# alias ls="exa --color=always --group-directories-first"
 alias la="ls -al --git"
 alias rc="source $HOME/.config/fish/config.fish"
 alias u="url"
@@ -10,6 +10,7 @@ alias fulldate="date +%A,\ %d\ %b,\ %l:%M\ %p"
 alias sail="./vendor/bin/sail"
 alias sac="source env/bin/activate.fish"
 alias rm="trash"
+alias cl="clear"
 
 # notes cli aliases
 alias n="notes"
@@ -58,3 +59,16 @@ alias prw="pnpm watch -s --"
 alias pu="npx npm-check-updates --dep prod,dev --upgrade"
 
 alias repo="gh repo view --web"
+
+alias test_hcone_key="cat ~/dev/code/helicone/supabase/seed.sql | grep \"Organization for Test\" | grep -o \"sk-helicone-[a-z0-9]*-[a-z0-9]*-[a-z0-9]*-[a-z0-9]*\" | pbcopy"
+
+alias convert="cloudconvert convert"
+
+alias grv="gh repo view --web"
+alias gpc="gh pr create"
+alias gpv="gh pr view --web"
+
+# cargo aliases
+alias csc="cargo +stable clippy"
+alias cnf="cargo +nightly fmt"
+alias cc="cargo check"

@@ -6,22 +6,24 @@
 [user]
   name = Kavin Valli
   email = mail@kavin.me
-  signingkey = BB2A0B15D1BCAD86
+  signingkey = D1BCAD86
 [core]
   editor = nvim
   autocrlf = input
 	ignorecase = false
-  pager = "delta"
+  ; pager = "delta"
+  pager = "diff-so-fancy | less --tabs=4 -RFX"
 [interactive]
-  diffFilter = "delta --color-only"
+  ; diffFilter = "delta --color-only"
+  diffFilter = "diff-so-fancy --patch"
 [delta]
   navigate = true
 [merge]
   conflictstyle = diff3
 [commit]
-  gpgsign = true
+	gpgsign = true
 [pull]
-  rebase = false
+  rebase = true
 [http]
   sslVerify = true
 [color]
@@ -62,7 +64,8 @@
 [alias]
   r = !GIT_NO_PAGER=1 git l -30
   co = checkout
-  c = commit -m
+  c = commit
+  cm = commit -m
   caa = commit -am
   aa = add --all
   s = status
@@ -90,3 +93,7 @@
   defaultBranch = main
 [url "git@github.com:"]
   insteadOf = https://github.com/
+[gpg]
+	program = /usr/local/bin/gpg
+[push]
+	autoSetupRemote = true

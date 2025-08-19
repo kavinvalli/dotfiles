@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+HELICONE_DIRECTORY="$HOME/dev/code/helicone"
+cd $HELICONE_DIRECTORY
+
+/opt/homebrew/bin/tmux new-session -ds helicone -c $HELICONE_DIRECTORY
+
+if [[ -z $TMUX ]]; then
+  echo 'Attaching to tmux session'
+    /opt/homebrew/bin/tmux attach-session -t helicone
+else
+  echo 'Switching to tmux session'
+    /opt/homebrew/bin/tmux switch-client -t helicone
+fi
+
+/opt/homebrew/bin/tmux new-window -t helicone: -n "web"
+/opt/homebrew/bin/tmux new-window -t helicone: -n "jawn"
+/opt/homebrew/bin/tmux new-window -t helicone: -n "worker"
+/opt/homebrew/bin/tmux new-window -t helicone: -n "bifrost"
+/opt/homebrew/bin/tmux new-window -t helicone: -n "docs"
+
+/opt/homebrew/bin/tmux send-keys -t helicone:0 'source venv/bin/activate.fish && python3 clickhouse/ch_hcone.py --restart && python3 minio_hcone.py --restart' C-m
+/opt/homebrew/bin/tmux send-keys -t helicone:0 '\n' C-m
+/opt/homebrew/bin/tmux send-keys -t helicone:1 'cd web && nvm use 20.0.0 && yarn dev:local' C-m
+/opt/homebrew/bin/tmux send-keys -t helicone:2 'source venv/bin/activate.fish && nvm use 20.0.0 && cd valhalla/jawn && yarn dev' C-m
+/opt/homebrew/bin/tmux send-keys -t helicone:3 'cd worker && ./run_all_workers.sh' C-m
+/opt/homebrew/bin/tmux send-keys -t helicone:4 'cd bifrost && npm run dev' C-m
+# /opt/homebrew/bin/tmux send-keys -t helicone:5 'cd docs && mintlify dev --port 3003' C-m
+
+cd -
