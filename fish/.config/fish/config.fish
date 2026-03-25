@@ -35,6 +35,7 @@ set -gx CLOUDCONVERT_API_KEY "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxI
 
 # pnpm end
 fish_add_path /Users/kavinvalli/.spicetify
+fish_add_path /Applications/Postgres.app/Contents/Versions/latest/bin
 
 # function fish_greeting
   # colorscript random
@@ -54,3 +55,22 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; se
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 set -gx PATH "/opt/homebrew/opt/python/libexec/bin" $PATH
+
+set -gx PATH "/Users/kavinvalli/.local/state/fnm_multishells/83869_1767999892286/bin" $PATH;
+set -gx FNM_MULTISHELL_PATH "/Users/kavinvalli/.local/state/fnm_multishells/83869_1767999892286";
+set -gx FNM_VERSION_FILE_STRATEGY "local";
+set -gx FNM_DIR "/Users/kavinvalli/.local/share/fnm";
+set -gx FNM_LOGLEVEL "info";
+set -gx FNM_NODE_DIST_MIRROR "https://nodejs.org/dist";
+set -gx FNM_COREPACK_ENABLED "false";
+set -gx FNM_RESOLVE_ENGINES "true";
+set -gx FNM_ARCH "arm64";
+
+
+# opencode
+fish_add_path /Users/kavinvalli/.opencode/bin
+
+eval "$(fnm env)"
+
+# Added by Hades
+set -gx PATH $PATH $HOME/.hades/bin

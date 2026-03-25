@@ -1,6 +1,8 @@
+#!/usr/bin/env bash
+
 if [[ -z $1 ]]; then
-  output=$(find . -not -path "./.git/*" | fzf --tac --preview "bat {}")
+  output=$(find . -not -path "./.git/*" | fzf --color=bg:#101010,bg+:#232323,fg:#A0A0A0,fg+:#FFFFFF,hl:#FFC799,hl+:#FFC799,pointer:#FFC799,prompt:#FFC799,info:#5C5C5C --tac --preview "bat {}")
 else
-  output=$(find . -not -path "./.git/*" | fzf --tac -q $1 --preview "bat {}")
+  output=$(find . -not -path "./.git/*" | fzf --color=bg:#101010,bg+:#232323,fg:#A0A0A0,fg+:#FFFFFF,hl:#FFC799,hl+:#FFC799,pointer:#FFC799,prompt:#FFC799,info:#5C5C5C --tac -q $1 --preview "bat {}")
 fi
 nvim $output

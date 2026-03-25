@@ -1,0 +1,161 @@
+# AeroSpace config
+# Docs: https://nikitabobko.github.io/AeroSpace/commands
+
+config-version = 2
+
+# Set Messages/WhatsApp workspace (M) to accordion on startup, then go to workspace 1
+after-startup-command = ['workspace M', 'layout accordion horizontal', 'workspace 1']
+
+start-at-login = true
+
+# Normalizations
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+automatically-unhide-macos-hidden-apps = true
+
+# Workspaces:
+#   Laptop:  S (Slack), M (Messages + WhatsApp), U (Music)
+#   Monitor: 1 (Arc), 2 (Ghostty), 3 (Cursor), N (Notion), C (Notion Calendar), 4-6 (spare)
+persistent-workspaces = ['1', '2', '3', '4', '5', '6', 'S', 'M', 'N', 'C', 'U', 'X']
+
+on-mode-changed = []
+
+[key-mapping]
+    preset = 'qwerty'
+
+# Assign workspaces to monitors
+# Monitor 1 = laptop (left), Monitor 2 = external (right)
+# When no external monitor is connected, everything falls back to the single display
+[workspace-to-monitor-force-assignment]
+    S = 1
+    M = 1
+    U = 1
+    X = 1
+    # 1 (Arc) intentionally unassigned — use alt-shift-tab to move between monitors
+    2 = 2
+    3 = 2
+    4 = 2
+    5 = 2
+    6 = 2
+    N = 2
+    C = 2
+
+[gaps]
+    inner.horizontal = 0
+    inner.vertical =   0
+    outer.left =       0
+    outer.bottom =     0
+    outer.top =        0
+    outer.right =      0
+
+# Auto-assign apps to workspaces
+[[on-window-detected]]
+    if.app-id = 'com.tinyspeck.slackmacgap'
+    run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+    if.app-id = 'net.whatsapp.WhatsApp'
+    run = 'move-node-to-workspace M'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.MobileSMS'
+    run = 'move-node-to-workspace M'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.Music'
+    run = 'move-node-to-workspace U'
+
+[[on-window-detected]]
+    if.app-id = 'company.thebrowser.Browser'
+    run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+    if.app-id = 'com.mitchellh.ghostty'
+    run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+    if.app-id = 'com.todesktop.230313mzl4w4u92'
+    run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+    if.app-id = 'notion.id'
+    run = 'move-node-to-workspace N'
+
+[[on-window-detected]]
+    if.app-id = 'com.cron.electron'
+    run = 'move-node-to-workspace C'
+
+# Keybindings
+[mode.main.binding]
+
+    # Layout
+    alt-slash = 'layout tiles horizontal vertical'
+    alt-comma = 'layout accordion horizontal vertical'
+
+    # Focus
+    alt-h = 'focus left'
+    alt-j = 'focus down'
+    alt-k = 'focus up'
+    alt-l = 'focus right'
+
+    # Move windows
+    alt-shift-h = 'move left'
+    alt-shift-j = 'move down'
+    alt-shift-k = 'move up'
+    alt-shift-l = 'move right'
+
+    # Resize
+    alt-minus = 'resize smart -50'
+    alt-equal = 'resize smart +50'
+
+    # Workspaces
+    alt-1 = 'workspace 1'
+    alt-2 = 'workspace 2'
+    alt-3 = 'workspace 3'
+    alt-4 = 'workspace 4'
+    alt-5 = 'workspace 5'
+    alt-6 = 'workspace 6'
+    alt-s = 'workspace S'
+    alt-m = 'workspace M'
+    alt-n = 'workspace N'
+    alt-c = 'workspace C'
+    alt-u = 'workspace U'
+    alt-x = 'workspace X'
+
+    # Move node to workspace
+    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-2 = 'move-node-to-workspace 2'
+    alt-shift-3 = 'move-node-to-workspace 3'
+    alt-shift-4 = 'move-node-to-workspace 4'
+    alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-6 = 'move-node-to-workspace 6'
+    alt-shift-s = 'move-node-to-workspace S'
+    alt-shift-m = 'move-node-to-workspace M'
+    alt-shift-n = 'move-node-to-workspace N'
+    alt-shift-c = 'move-node-to-workspace C'
+    alt-shift-u = 'move-node-to-workspace U'
+    alt-shift-x = 'move-node-to-workspace X'
+
+    # Workspace navigation
+    alt-tab = 'workspace-back-and-forth'
+    alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+    # Service mode
+    alt-shift-semicolon = 'mode service'
+
+[mode.service.binding]
+    esc = ['reload-config', 'mode main']
+    r = ['flatten-workspace-tree', 'mode main']
+    f = ['layout floating tiling', 'mode main']
+    backspace = ['close-all-windows-but-current', 'mode main']
+
+    alt-shift-h = ['join-with left', 'mode main']
+    alt-shift-j = ['join-with down', 'mode main']
+    alt-shift-k = ['join-with up', 'mode main']
+    alt-shift-l = ['join-with right', 'mode main']

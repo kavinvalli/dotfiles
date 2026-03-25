@@ -19,6 +19,3 @@ brew "gh"
 brew "diff-so-fancy"
 brew "git-delta"
 brew "mysql"
-
-cask "flutter"
-cask "phpmon"

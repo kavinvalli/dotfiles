@@ -6,9 +6,9 @@
 [user]
   name = Kavin Valli
   email = mail@kavin.me
-  signingkey = D1BCAD86
+  signingkey=816D0A8E22DB4C5C
 [core]
-  editor = nvim
+  editor = vim
   autocrlf = input
 	ignorecase = false
   ; pager = "delta"
@@ -20,8 +20,6 @@
   navigate = true
 [merge]
   conflictstyle = diff3
-[commit]
-	gpgsign = true
 [pull]
   rebase = true
 [http]
@@ -93,7 +91,9 @@
   defaultBranch = main
 [url "git@github.com:"]
   insteadOf = https://github.com/
-[gpg]
-	program = /usr/local/bin/gpg
 [push]
 	autoSetupRemote = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[commit]
+	gpgsign = true

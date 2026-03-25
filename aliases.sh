@@ -9,7 +9,6 @@ alias b="browse"
 alias fulldate="date +%A,\ %d\ %b,\ %l:%M\ %p"
 alias sail="./vendor/bin/sail"
 alias sac="source env/bin/activate.fish"
-alias rm="trash"
 alias cl="clear"
 
 # notes cli aliases
@@ -18,7 +17,6 @@ alias ns="notes -s"
 
 # navigation aliases
 alias c="cd ~/dev/code"
-alias e="cd ~/dev/exun"
 alias cn="cd ~/.config"
 alias dt="cd ~/.dotfiles"
 
@@ -57,6 +55,11 @@ alias prb="pnpm build -s --"
 alias prd="pnpm dev -s --"
 alias prw="pnpm watch -s --"
 alias pu="npx npm-check-updates --dep prod,dev --upgrade"
+
+# v0 related
+alias v0="cd ~/dev/code/v0"
+alias pdc="pnpm dev:chat"
+alias pdcs="pnpm dev:code-server"
 
 alias repo="gh repo view --web"
 

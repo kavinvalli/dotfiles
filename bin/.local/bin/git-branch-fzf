@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+  result=$(git branch | grep -v "^\*" | sed 's/^[ ]*//' | fzf --print-query --color=bg:#101010,bg+:#232323,fg:#A0A0A0,fg+:#FFFFFF,hl:#FFC799,hl+:#FFC799,pointer:#FFC799,prompt:#FFC799,info:#5C5C5C)
+  query=$(echo "$result" | sed -n '1p')
+  selected=$(echo "$result" | sed -n '2p')
+
+  # If a branch was selected from the list, use it; otherwise use the typed query
+  if [[ -z $selected ]]; then
+      selected=$query
+  fi
+fi
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+# If the branch exists, check it out; otherwise create it
+if git show-ref --verify --quiet "refs/heads/$selected"; then
+    git checkout "$selected"
+else
+    git checkout -b "$selected"
+fi
+

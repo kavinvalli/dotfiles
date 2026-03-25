@@ -1,0 +1,5 @@
+theme = Vesper
+font-size = 13
+font-family = Geist Mono
+shell-integration = fish
+background = #000000
