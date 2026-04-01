@@ -35,6 +35,3 @@ require "autocmds"
 vim.schedule(function()
   require "mappings"
 end)
-
-vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" })
