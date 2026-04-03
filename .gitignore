@@ -328,4 +328,5 @@ pyrightconfig.json
 
 bin/.local/share
 bin/.local/state
+.repos.txt
 
