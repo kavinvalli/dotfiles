@@ -4,7 +4,7 @@
 
 > Note: all these have to be installed
 
-- [iTerm2](https://iterm2.com/) - Terminal
+- [Ghostty](https://ghostty.org/) - Terminal
 - [fish](https://fishshell.com) - Shell
 - [neovim](https://neovim.io/) - Editor
 - [tmux](https://github.com/tmux/tmux) - Terminal Multiplexer
