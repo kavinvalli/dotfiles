@@ -7,19 +7,7 @@ local M = {}
 
 M.base46 = {
 	theme = "vesper",
-	transparency = true,
-
-	hl_override = {
-		Normal = { bg = "NONE" },
-		NormalNC = { bg = "NONE" },
-		SignColumn = { bg = "NONE" },
-		EndOfBuffer = { bg = "NONE" },
-		NormalFloat = { bg = "#111111" },
-		FloatBorder = { bg = "#111111" },
-		Pmenu = { bg = "#111111" },
-		BlinkCmpMenu = { bg = "#111111" },
-		BlinkCmpDoc = { bg = "#111111" },
-	},
+	transparency = false,
 }
 
 -- M.nvdash = { load_on_startup = true }

@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-if [[ -z $1 ]]; then
-  output=$(find . -not -path "./.git/*" | fzf --color=bg:#101010,bg+:#232323,fg:#A0A0A0,fg+:#FFFFFF,hl:#FFC799,hl+:#FFC799,pointer:#FFC799,prompt:#FFC799,info:#5C5C5C --tac --preview "bat {}")
-else
-  output=$(find . -not -path "./.git/*" | fzf --color=bg:#101010,bg+:#232323,fg:#A0A0A0,fg+:#FFFFFF,hl:#FFC799,hl+:#FFC799,pointer:#FFC799,prompt:#FFC799,info:#5C5C5C --tac -q $1 --preview "bat {}")
+FZF_COLORS="bg:#101010,bg+:#232323,fg:#A0A0A0,fg+:#FFFFFF,hl:#FFC799,hl+:#FFC799,pointer:#FFC799,prompt:#FFC799,info:#5C5C5C"
+
+output=$(find . \
+  \( -name .git -o -name node_modules -o -name .next -o -name .nuxt -o -name .svelte-kit -o -name .turbo -o -name dist -o -name build -o -name coverage -o -name .cache -o -name target \) -prune \
+  -o -print | fzf --color="$FZF_COLORS" --tac --query "$*" --preview "bat {}")
+
+if [[ -n "$output" ]]; then
+  nvim "$output"
 fi
-nvim $output
