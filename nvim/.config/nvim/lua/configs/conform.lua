@@ -1,15 +1,20 @@
+local web_formatters = { "oxfmt", "prettierd", "prettier", stop_after_first = true }
+
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    javascript = { "prettierd", "prettier", stop_after_first = true },
-    typescript = { "prettierd", "prettier", stop_after_first = true },
-    css = { "prettierd", "prettier", stop_after_first = true },
-    html = { "prettierd", "prettier", stop_after_first = true },
+    javascript = web_formatters,
+    javascriptreact = web_formatters,
+    typescript = web_formatters,
+    typescriptreact = web_formatters,
+    css = web_formatters,
+    html = web_formatters,
+    json = web_formatters,
+    jsonc = web_formatters,
   },
 
   format_on_save = {
-    -- These options will be passed to conform.format()
-    timeout_ms = 500,
+    timeout_ms = 1000,
     lsp_fallback = true,
   },
 }

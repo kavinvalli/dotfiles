@@ -5,3 +5,4 @@ shell-integration = fish
 background = #000000
 background-opacity = 0.85
 background-opacity-cells = false
+keybind = super+arrow_left=ignore

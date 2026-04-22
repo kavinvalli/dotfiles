@@ -3,28 +3,8 @@
 
 config-version = 2
 
-# Set workspace defaults on startup without force-locking monitor placement.
-# Workspaces 2/3/4/5/6/N/C are nudged to the next monitor (external when present),
-# but can still be moved later with alt-shift-tab.
-after-startup-command = [
-    'workspace M',
-    'layout accordion horizontal',
-    'workspace 2',
-    'move-workspace-to-monitor --wrap-around next',
-    'workspace 3',
-    'move-workspace-to-monitor --wrap-around next',
-    'workspace 4',
-    'move-workspace-to-monitor --wrap-around next',
-    'workspace 5',
-    'move-workspace-to-monitor --wrap-around next',
-    'workspace 6',
-    'move-workspace-to-monitor --wrap-around next',
-    'workspace N',
-    'move-workspace-to-monitor --wrap-around next',
-    'workspace C',
-    'move-workspace-to-monitor --wrap-around next',
-    'workspace 1',
-]
+# Set Messages/WhatsApp workspace (M) to accordion on startup, then go to workspace 1
+after-startup-command = ['workspace M', 'layout accordion horizontal', 'workspace 1', 'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0']
 
 start-at-login = true
 
@@ -41,7 +21,7 @@ automatically-unhide-macos-hidden-apps = true
 
 # Workspaces:
 #   Laptop:  S (Slack), M (Messages + WhatsApp), U (Music)
-#   Monitor: 1 (Arc), 2 (Ghostty), 3 (Cursor), N (Notion), C (Notion Calendar), 4-6 (spare)
+#   Monitor: 1 (Chrome), 2 (Ghostty), 3 (Cursor), N (Notion), C (Notion Calendar), 4-6 (spare)
 persistent-workspaces = ['1', '2', '3', '4', '5', '6', 'S', 'M', 'N', 'C', 'U', 'X']
 
 on-mode-changed = []
@@ -49,9 +29,22 @@ on-mode-changed = []
 [key-mapping]
     preset = 'qwerty'
 
-# Workspaces are not force-assigned to monitors.
-# Use alt-shift-tab (`move-workspace-to-monitor --wrap-around next`) to move
-# whichever workspace you're currently on between displays.
+# Assign workspaces to monitors
+# Monitor 1 = laptop (left), Monitor 2 = external (right)
+# When no external monitor is connected, everything falls back to the single display
+[workspace-to-monitor-force-assignment]
+    S = 1
+    M = 1
+    U = 1
+    X = 1
+    # 1 (Chrome) intentionally unassigned — use alt-shift-tab to move between monitors
+    2 = 2
+    3 = 2
+    4 = 2
+    5 = 2
+    6 = 2
+    N = 2
+    C = 2
 
 [gaps]
     inner.horizontal = 0
@@ -79,7 +72,7 @@ on-mode-changed = []
     run = 'move-node-to-workspace U'
 
 [[on-window-detected]]
-    if.app-id = 'company.thebrowser.Browser'
+    if.app-id = 'com.google.Chrome'
     run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
